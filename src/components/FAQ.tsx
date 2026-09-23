@@ -111,7 +111,7 @@ const FAQ = () => {
                     </div>
                     <div className="faq-answer">
                         <div className="faq-answer-inner">
-                            <p>A milder form of the placement. Mars's influence is present but weaker, usually due to
+                            <p>A milder form of the placement. Mars&apos;s influence is present but weaker, usually due to
                                 its house position or aspects from other planets. It carries less weight than a full
                                 Manglik Dosha.</p>
                         </div>
@@ -171,7 +171,7 @@ const FAQ = () => {
                     </div>
                     <div className="faq-answer">
                         <div className="faq-answer-inner">
-                            <p>No. This is a common myth, not a classical rule. Cancellation depends on your chart's
+                            <p>No. This is a common myth, not a classical rule. Cancellation depends on your chart&apos;s
                                 specific combinations, not your age and remedies that you perform according to your
                                 birth chart. You need to consult an expert astrologer before performing any such remedy.
                             </p>
@@ -205,7 +205,7 @@ const FAQ = () => {
                     </div>
                     <div className="faq-answer">
                         <div className="faq-answer-inner">
-                            <p>Yes. Traditional belief holds that two Manglik charts cancel each other's effect, making
+                            <p>Yes. Traditional belief holds that two Manglik charts cancel each other&apos;s effect, making
                                 this one of the most commonly recommended matches for a Manglik individual.</p>
                         </div>
                     </div>

@@ -43,8 +43,8 @@ const ManglikInfo = () => {
                         in Vedic astrology, based on where Mars sits in your Kundli at the time of birth. Mars governs
                         courage, intensity, and drive, and when placed in certain houses, Vedic tradition holds that
                         these qualities carry into marriage and married life.</p>
-                    <p>It's not a curse or a flaw, just one placement worth understanding, especially if someone's
-                        already used the word "Manglik" around you.</p>
+                    <p>It&apos;s not a curse or a flaw, just one placement worth understanding, especially if someone&apos;s
+                        already used the word &quot;Manglik&quot; around you.</p>
                 </div>
             </div>
 
@@ -79,11 +79,11 @@ const ManglikInfo = () => {
                 </div>
                 <div className="info-content">
                     <p>In Vedic astrology, Mars (Mangal) is known as Angaraka - the fiery planet of energy, courage, and
-                        action. It's a powerful influence, but fire needs balance, especially in a partnership built on
+                        action. It&apos;s a powerful influence, but fire needs balance, especially in a partnership built on
                         harmony. Manglik Dosha forms when Mars occupies specific houses in your Kundli, counted from the
                         Lagna (Ascendant), Moon, or Venus: the 1st, 2nd, 4th, 7th, 8th, and 12th houses. Each of these
                         houses governs an area close to marriage and family life, which is why Vedic astrologers pay
-                        particular attention to Mars's position there when reading a chart for compatibility.</p>
+                        particular attention to Mars&apos;s position there when reading a chart for compatibility.</p>
                 </div>
             </div>
 
@@ -164,7 +164,7 @@ const ManglikInfo = () => {
                     </div>
                 </div>
                 <div className="info-content">
-                    <p>Vedic astrology doesn't leave a Manglik placement unaddressed - a set of remedies, known as Kuja
+                    <p>Vedic astrology doesn&apos;t leave a Manglik placement unaddressed - a set of remedies, known as Kuja
                         Dosha Nivarana, have been practiced for generations to bring Mars into balance:</p>
                     <div className="effects-pill-grid">
                         <div className="effect-pill">
@@ -188,7 +188,7 @@ const ManglikInfo = () => {
                                     <polyline points="14 2 14 8 20 8"></polyline>
                                 </svg>
                             </div>
-                            <div className="e-text">Worship of Hanuman to pacify Mars's intensity</div>
+                            <div className="e-text">Worship of Hanuman to pacify Mars&apos;s intensity</div>
                         </div>
                         <div className="effect-pill">
                             <div className="e-icon red-icon-bg">
@@ -198,7 +198,7 @@ const ManglikInfo = () => {
                                     <polyline points="12 6 12 12 16 14"></polyline>
                                 </svg>
                             </div>
-                            <div className="e-text">Fasting on Tuesdays - Mars's day in the Vedic calendar</div>
+                            <div className="e-text">Fasting on Tuesdays - Mars&apos;s day in the Vedic calendar</div>
                         </div>
                         <div className="effect-pill">
                             <div className="e-icon red-icon-bg">
@@ -251,7 +251,7 @@ const ManglikInfo = () => {
                                     <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                                 </svg>
                             </div>
-                            <div className="e-text">Mangal Shanti Homa - a formal fire ritual to pacify Mars's placement
+                            <div className="e-text">Mangal Shanti Homa - a formal fire ritual to pacify Mars&apos;s placement
                             </div>
                         </div>
                     </div>
@@ -292,7 +292,7 @@ const ManglikInfo = () => {
                     </div>
                 </div>
                 <div className="info-content">
-                    <p>Manglik Dosha isn't always permanent. Vedic astrology recognizes specific cancellation conditions
+                    <p>Manglik Dosha isn&apos;t always permanent. Vedic astrology recognizes specific cancellation conditions
                         known as Bhanga, where the effect is reduced or nullified entirely:</p>
                     <div className="effects-pill-grid">
                         <div className="effect-pill">
