@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 const Navbar = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -56,10 +57,10 @@ const Navbar = () => {
         <div className="navbar-container">
 
             
-            <a href="/" className="brand-logo">
+            <Link href="/" className="brand-logo">
                 <img  src="https://www.astroved.com/astropedia/assets/images/astropedia-logo.svg" alt="Astropedia Logo"
                     className="logo-img" />
-            </a>
+            </Link>
 
             
             <nav className="main-nav desktop-only">
@@ -285,10 +286,10 @@ const Navbar = () => {
     <div className={`drawer-overlay ${isDrawerOpen ? 'open' : ''}`} id="drawerOverlay" onClick={closeDrawer}></div>
     <div className={`mobile-drawer ${isDrawerOpen ? 'open' : ''}`} id="mobileDrawer">
         <div className="drawer-header">
-            <a href="/" className="drawer-logo">
+            <Link href="/" className="drawer-logo">
                 <img  src="https://cdn.astroved.com/images/images-av/AstroVed-Logo.svg" alt="AstroVed Logo"
                     className="logo-img" />
-            </a>
+            </Link>
             <button className="close-drawer-btn" id="closeDrawer" onClick={closeDrawer}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                     stroke="#5C45FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
