@@ -14,10 +14,12 @@ interface CustomSelectProps {
   onChange: (value: string) => void;
   options: Option[];
   placeholder?: string;
+  searchable?: boolean;
 }
 
-const CustomSelect = ({ id, value, onChange, options, placeholder = "" }: CustomSelectProps) => {
+const CustomSelect = ({ id, value, onChange, options, placeholder = "", searchable = false }: CustomSelectProps) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
   const wrapperRef = useRef<HTMLDivElement>(null);
 
   // Find currently selected option
@@ -36,6 +38,10 @@ const CustomSelect = ({ id, value, onChange, options, placeholder = "" }: Custom
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
+  useEffect(() => {
+    if (!isOpen) setSearchTerm("");
+  }, [isOpen]);
 
   // Sync z-index with parent when open
   useEffect(() => {
@@ -64,6 +70,10 @@ const CustomSelect = ({ id, value, onChange, options, placeholder = "" }: Custom
     setIsOpen(false);
   };
 
+  const filteredOptions = searchable 
+    ? options.filter(opt => !opt.disabled && opt.label.toLowerCase().includes(searchTerm.toLowerCase()))
+    : options.filter(opt => !opt.disabled);
+
   return (
     <div className="custom-select-wrapper" ref={wrapperRef}>
       {/* Hidden native select for accessibility/forms if needed */}
@@ -78,19 +88,60 @@ const CustomSelect = ({ id, value, onChange, options, placeholder = "" }: Custom
         className={`custom-select-trigger ${isOpen ? 'active' : ''}`} 
         onClick={toggleDropdown}
       >
-        <span>{displayText}</span>
+        {searchable ? (
+          <input
+            type="text"
+            value={isOpen ? searchTerm : (value ? displayText : "")}
+            onChange={(e) => {
+              setSearchTerm(e.target.value);
+              if (!isOpen) setIsOpen(true);
+            }}
+            placeholder={isOpen && value ? displayText : placeholder}
+            onClick={(e) => {
+              e.stopPropagation();
+              if (!isOpen) setIsOpen(true);
+            }}
+            style={{
+              border: 'none',
+              outline: 'none',
+              boxShadow: 'none',
+              background: 'transparent',
+              width: '100%',
+              color: 'inherit',
+              fontFamily: 'inherit',
+              fontSize: 'inherit',
+              cursor: 'text',
+              padding: 0,
+              margin: 0
+            }}
+          />
+        ) : (
+          <span>{displayText}</span>
+        )}
       </div>
 
-      <div className={`custom-options-container ${isOpen ? 'active' : ''}`}>
-        {options.filter(opt => !opt.disabled).map((opt, i) => (
+      <div className={`custom-options-container ${isOpen ? 'active' : ''}`} style={{ overscrollBehavior: 'contain', maxHeight: '250px', overflowY: 'auto' }}>
+        {/* Search input moved to trigger */}
+        {filteredOptions.map((opt) => (
           <div
-            key={i}
+            key={opt.value}
             className={`custom-option ${value === opt.value ? 'selected' : ''}`}
+            onPointerDown={(e) => {
+              e.preventDefault();
+              handleOptionClick(e, opt);
+            }}
+            onMouseDown={(e) => {
+              e.preventDefault();
+              handleOptionClick(e, opt);
+            }}
             onClick={(e) => handleOptionClick(e, opt)}
           >
             {opt.label}
           </div>
         ))}
+        {searchable && filteredOptions.length === 0 && (
+            <div style={{ padding: '10px', textAlign: 'center', color: '#94a3b8', fontSize: '14px' }}>No options found</div>
+        )}
       </div>
     </div>
   );

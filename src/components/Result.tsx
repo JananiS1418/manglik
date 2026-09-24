@@ -2,12 +2,15 @@
 
 import React, { useEffect } from 'react';
 
+import { ManglikResult } from './ManglikFlow';
+
 interface ResultProps {
   isVisible: boolean;
   isManglik: boolean;
+  result: ManglikResult | null;
 }
 
-const Result = ({ isVisible, isManglik }: ResultProps) => {
+const Result = ({ isVisible, isManglik, result }: ResultProps) => {
   useEffect(() => {
     if (isVisible && !isManglik) {
       const container = document.getElementById('successParticles');
@@ -294,7 +297,7 @@ const Result = ({ isVisible, isManglik }: ResultProps) => {
                             style={{color: '#64748b', fontSize: '12px', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '2px'}}>
                             MOON SIGN</div>
                         <div style={{color: '#1e3a8a', fontSize: '20px', fontFamily: '\'Playfair Display\', serif', fontWeight: '700'}}
-                            id="resultMoonSign">Taurus</div>
+                            id="resultMoonSign">{result?.moonSign}</div>
                     </div>
                 </div>
 
@@ -318,7 +321,7 @@ const Result = ({ isVisible, isManglik }: ResultProps) => {
                             style={{color: '#64748b', fontSize: '12px', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '2px'}}>
                             BIRTH STAR</div>
                         <div style={{color: '#1e3a8a', fontSize: '20px', fontFamily: '\'Playfair Display\', serif', fontWeight: '700'}}
-                            id="resultBirthStar">Rohini</div>
+                            id="resultBirthStar">{result?.birthStar}</div>
                     </div>
                 </div>
 
@@ -519,16 +522,7 @@ const Result = ({ isVisible, isManglik }: ResultProps) => {
                                 <div className="mp-content-container">
                                     <h3 className="mp-block-title">Prediction <span className="sh-star"
                                             style={{color: '#be123c', fontSize: '14px', marginLeft: '5px'}}>✦</span></h3>
-                                    <p>You have Mars in the 2nd House from the Moon in your birth chart. By this, you
-                                        come
-                                        under Manglik Dosha (Mars affliction). The second house signifies your speech,
-                                        wealth, savings, family, ornaments, cheerfulness, learning, education, and
-                                        knowledge.</p>
-                                    <p>This placement of Mars is not appreciated in Vedic texts. By this position of
-                                        Mars,
-                                        you may face problems and have to battle tough situations in relationships. Your
-                                        words could cause turbulence in your familial relationships. You may also face
-                                        problems related to wealth or from your blood relations.</p>
+                                    <p>{result?.prediction || 'Prediction based on your chart will appear here.'}</p>
                                 </div>
                             </div>
 
@@ -545,9 +539,7 @@ const Result = ({ isVisible, isManglik }: ResultProps) => {
                                 <div className="mp-content-container">
                                     <h3 className="mp-block-title" style={{color: '#d97706'}}>Remedies <span className="sh-star"
                                             style={{color: '#d97706', fontSize: '14px', marginLeft: '5px'}}>✦</span></h3>
-                                    <p>Appease Mars and propitiate Lord Muruga, the overlord of the fiery planet to
-                                        reduce
-                                        the malefic effects of Mars in the birth chart.</p>
+                                    <p>{result?.remedies || 'Remedies for your chart will appear here.'}</p>
                                 </div>
                             </div>
                         </div>

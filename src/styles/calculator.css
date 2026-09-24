@@ -665,12 +665,17 @@ body {
     transform: translateY(-2px);
 }
 
-.input-group.col-3 select {
-    width: calc(33.33% - 8px);
+.input-group.col-3 > *:nth-child(1),
+.input-group.col-3 > *:nth-child(3) {
+    flex: 2;
 }
 
-.input-group.col-4 select {
-    width: calc(25% - 9px);
+.input-group.col-3 > *:nth-child(2) {
+    flex: 3.5;
+}
+
+.input-group.col-4 > * {
+    flex: 1;
 }
 
 /* Action Box & Button */
@@ -1156,8 +1161,15 @@ body {
         gap: 8px;
     }
 
+    .input-group.col-3 > *:nth-child(1),
+    .input-group.col-3 > *:nth-child(3) {
+        flex: 2;
+    }
+    .input-group.col-3 > *:nth-child(2) {
+        flex: 3.5;
+    }
+
     .input-group.col-3 select {
-        width: calc(33.33% - 5.33px);
         padding-left: 4px;
         /* Reduce left padding to maximize text space */
         padding-right: 22px;
@@ -1423,14 +1435,7 @@ body {
     width: 100%;
 }
 
-/* Match the exact width for columns */
-.input-group.col-3 .custom-select-wrapper {
-    width: calc(33.33% - 8px);
-}
-
-.input-group.col-4 .custom-select-wrapper {
-    width: calc(25% - 9px);
-}
+/* Widths are now handled by flex on the parent .input-group.col-3 */
 
 .custom-select-trigger {
     width: 100%;
@@ -1558,10 +1563,6 @@ body {
 @media (max-width: 600px) {
     .input-group.col-4 .custom-select-wrapper {
         width: 100% !important;
-    }
-
-    .input-group.col-3 .custom-select-wrapper {
-        width: calc(33.33% - 5.33px) !important;
     }
 }
 
