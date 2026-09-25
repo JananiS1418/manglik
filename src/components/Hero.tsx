@@ -107,6 +107,70 @@ const Hero = ({
         value: country,
     }));
 
+    const [isCountryManuallySet, setIsCountryManuallySet] = useState(false);
+    const [hasAttemptedLocationDetection, setHasAttemptedLocationDetection] = useState(false);
+
+    useEffect(() => {
+        const detectLocation = async () => {
+            if (countriesList.length === 0 || hasAttemptedLocationDetection || isCountryManuallySet || formData.country) {
+                return;
+            }
+            setHasAttemptedLocationDetection(true);
+            try {
+                const response = await fetch("/api/location");
+                if (response.ok) {
+                    const data = await response.json();
+                    let detectedCountry = "";
+
+                    if (data.countryCode) {
+                        try {
+                            const regionNames = new Intl.DisplayNames(['en'], { type: 'region' });
+                            detectedCountry = regionNames.of(data.countryCode) || "";
+                        } catch (e) {
+                            console.error("Error converting country code:", e);
+                        }
+                    }
+
+                    if (!detectedCountry) {
+                        const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+                        const tzCountryMap: Record<string, string> = {
+                            'Asia/Kolkata': 'India',
+                            'Asia/Calcutta': 'India',
+                            'America/New_York': 'United States',
+                            'America/Los_Angeles': 'United States',
+                            'America/Chicago': 'United States',
+                            'America/Denver': 'United States',
+                            'Europe/London': 'United Kingdom',
+                            'Australia/Sydney': 'Australia',
+                            'Australia/Melbourne': 'Australia',
+                            'Asia/Dubai': 'United Arab Emirates',
+                            'Asia/Singapore': 'Singapore',
+                            'America/Toronto': 'Canada',
+                            'America/Vancouver': 'Canada'
+                        };
+                        if (tz && tzCountryMap[tz]) {
+                            detectedCountry = tzCountryMap[tz];
+                        }
+                    }
+
+                    if (detectedCountry) {
+                        const match = countriesList.find(c => c.toLowerCase() === detectedCountry.toLowerCase());
+                        if (match && !isCountryManuallySet && !formData.country) {
+                            setFormData(prev => ({
+                                ...prev,
+                                country: match
+                            }));
+                        }
+                    }
+                }
+            } catch (error) {
+                console.error("Error detecting location:", error);
+            }
+        };
+
+        detectLocation();
+    }, [countriesList, hasAttemptedLocationDetection, isCountryManuallySet, formData.country]);
+
     const [citySearchText, setCitySearchText] = useState("");
     const [cityOptions, setCityOptions] = useState<any[]>([]);
     const [isSearchingCity, setIsSearchingCity] = useState(false);
@@ -195,14 +259,14 @@ const Hero = ({
 
     return (
         <>
-            <section className="hero-section" style={{ position: "relative", zIndex: 999 }}>
+            <section className="hero-section" style={{ position: "relative", zIndex: 5 }}>
                 <div className="breadcrumb-container">
                     <div className="breadcrumb">
-                        <a href="#">Home</a>
+                        <a href="https://www.astroved.com/astropedia/en/home">Home</a>
 
                         <span className="separator">»</span>
 
-                        <a href="#">Free Tools</a>
+                        <a href="https://www.astroved.com/astropedia/en/freetools">Free Tools</a>
 
                         <span className="separator">»</span>
 
@@ -582,6 +646,7 @@ const Hero = ({
                                         <CustomSelect
                                             value={formData.country}
                                             onChange={(value) => {
+                                                setIsCountryManuallySet(true);
                                                 setFormData(prev => ({
                                                     ...prev,
                                                     country: value,
@@ -675,11 +740,11 @@ const Hero = ({
                                                     <div style={{ padding: "8px 12px", color: "#64748b", fontSize: "14px", fontFamily: "sans-serif", textAlign: "left" }}>Searching...</div>
                                                 ) : cityOptions.length > 0 ? (
                                                     cityOptions.map((cityObj, idx) => (
-                                                        <div 
+                                                        <div
                                                             key={cityObj._id || `${cityObj.City}-${idx}`}
-                                                            style={{ 
-                                                                padding: "8px 12px", 
-                                                                cursor: "pointer", 
+                                                            style={{
+                                                                padding: "8px 12px",
+                                                                cursor: "pointer",
                                                                 borderBottom: "1px solid #f1f5f9",
                                                                 fontSize: "14px",
                                                                 color: "#334155",

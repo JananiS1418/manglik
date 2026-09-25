@@ -1,362 +1,254 @@
 import React from 'react';
 
 const ManglikInfo = () => {
-  return (
-    <>
-      <section className="manglik-info-section">
-        <div className="container info-container">
-
-            
-            <div className="info-card gold-card">
-                <div className="info-bg-icon">
-                    <svg viewBox="0 0 100 100" fill="rgba(212, 175, 55, 0.1)" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M50 10 C 60 40, 90 40, 90 50 C 90 60, 60 60, 50 90 C 40 60, 10 60, 10 50 C 10 40, 40 40, 50 10 Z">
-                        </path>
-                        <circle cx="50" cy="50" r="15" fill="none" stroke="rgba(212, 175, 55, 0.2)" strokeWidth="2" />
-                        <text x="50" y="58" fontSize="24" textAnchor="middle" fill="rgba(212, 175, 55, 0.3)">ॐ</text>
-                    </svg>
-                </div>
-                <div className="info-header">
-                    <div className="info-icon-wrapper gold-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
-                            stroke="#D4AF37" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <circle cx="12" cy="12" r="4"></circle>
-                            <line x1="21.17" y1="8" x2="12" y2="8"></line>
-                            <line x1="3.95" y1="6.06" x2="8.54" y2="14"></line>
-                            <line x1="10.88" y1="21.94" x2="15.46" y2="14"></line>
-                        </svg>
+    return (
+        <section style={{ backgroundColor: '#ffffff', padding: '40px 20px', fontFamily: '"Inter", sans-serif' }}>
+            <style dangerouslySetInnerHTML={{
+                __html: `
+                .manglik-cta-btn {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 8px;
+                    background-color: #D47300;
+                    color: #fff;
+                    padding: 12px 24px;
+                    border-radius: 30px;
+                    text-decoration: none;
+                    font-weight: 600;
+                    font-size: 15px;
+                    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+                    box-shadow: 0 4px 6px rgba(212, 115, 0, 0.2);
+                }
+                .manglik-cta-btn:hover {
+                    transform: translateY(-3px) scale(1.02);
+                    box-shadow: 0 8px 15px rgba(212, 115, 0, 0.3);
+                    background-color: #e68a19;
+                }
+                .manglik-cta-btn svg {
+                    transition: transform 0.3s ease;
+                }
+                .manglik-cta-btn:hover svg {
+                    transform: translateX(4px);
+                }
+                .premium-text-link {
+                    color: #D47300;
+                    text-decoration: underline;
+                    text-underline-offset: 4px;
+                    font-weight: 600;
+                    transition: all 0.2s ease;
+                }
+                .premium-text-link:hover {
+                    color: #2D1854;
+                    text-decoration-color: #2D1854;
+                }
+                `
+            }} />
+            <div style={{ maxWidth: '1000px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '40px' }}>
+                
+                {/* Section 1: What is Mangal Dosha */}
+                <div>
+                    <h2 style={{ color: '#2D1854', fontSize: '24px', fontWeight: 'bold', marginBottom: '15px' }}>
+                        What Is Mangal Dosha (Chevvai Dosham)?
+                    </h2>
+                    <div style={{ color: '#4a4a4a', fontSize: '15px', lineHeight: '1.7' }}>
+                        <p style={{ marginBottom: '15px' }}><a href="https://www.astroved.com/articles/mangal-dosha" className="premium-text-link">Mangal Dosha</a> is a condition in Vedic astrology formed when Mars is placed in certain houses of the birth chart that are linked with marriage, family life, and relationships.</p>
+                        <p style={{ marginBottom: '15px' }}>Mars, also called Mangal, Kuja, or Angaraka, represents energy, courage, passion, and action. When its influence falls strongly on relationship-related areas of the horoscope, astrologers study how it may affect compatibility and married life.</p>
+                        <p style={{ marginBottom: '15px' }}>A person with this combination is commonly called Manglik.</p>
+                        <p style={{ marginBottom: '15px' }}>Kuja Dosha, Mangal Dosha, Manglik Dosha, and Chevvai or Sevvai Dosham refer to the same Mars-related condition. The name changes by region, but the astrological concept remains the same.</p>
+                        <p style={{ marginBottom: '0' }}>The actual effect depends on where Mars is placed and how it interacts with the rest of the birth chart.</p>
                     </div>
-                    <div className="info-title-group">
-                        <h2 className="info-title">
-                            <span className="dark-purple">What Is</span><br />
-                            <span className="gold-text">Manglik (Mangal) Dosha?</span>
-                        </h2>
-                        <div className="info-divider gold-divider">
-                            <span className="star">✦</span>
+                </div>
+
+                {/* Section 2: How is it Calculated */}
+                <div>
+                    <h2 style={{ color: '#2D1854', fontSize: '24px', fontWeight: 'bold', marginBottom: '15px' }}>
+                        Mangal Dosha calculation method and chart analysis
+                    </h2>
+                    <div style={{ color: '#4a4a4a', fontSize: '15px', lineHeight: '1.7' }}>
+                        <p style={{ marginBottom: '15px' }}>Mangal Dosha is calculated by checking the position of Mars in your birth chart using your date, exact time, and place of birth.</p>
+                        <p style={{ marginBottom: '15px' }}>A Manglik Dosha calculator first creates your Kundli and then checks whether Mars is placed in the houses traditionally associated with Mangal Dosha. The Lagna (Ascendant) is the main reference point, while some methods also consider Mars from the Moon and Venus.</p>
+                        <p style={{ marginBottom: '20px' }}>If Mars falls in one of these sensitive positions, you may be identified as Manglik. If it does not, you are generally considered non-Manglik.</p>
+                        
+                        <div style={{ marginBottom: '20px' }}>
+                            <a href="https://www.astroved.com/astrovedspeaks/" className="manglik-cta-btn">
+                                Check your manglik with our astrologer
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" width="20" height="20">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                        </div>
+
+                        <p style={{ marginBottom: '0' }}>The result is not based on Mars alone. Its strength, sign, aspects, and possible cancellation factors also help determine how strongly the Dosha may influence your chart.</p>
+                    </div>
+                </div>
+
+                {/* Section 3: Which Houses Cause Mangal Dosha */}
+                <div>
+                    <h2 style={{ color: '#2D1854', fontSize: '24px', fontWeight: 'bold', marginBottom: '15px' }}>
+                        Which Houses Cause Mangal Dosha?
+                    </h2>
+                    <div style={{ color: '#4a4a4a', fontSize: '15px', lineHeight: '1.7' }}>
+                        <p style={{ marginBottom: '15px' }}><a href="https://www.astroved.com/articles/characteristics-of-the-12-zodiac-signs" className="premium-text-link">Several houses</a> influence your marriage compatibility and your relationship with your partner.</p>
+                        <p style={{ marginBottom: '15px' }}>Mangal Dosha is traditionally considered when Mars occupies the 1st, 2nd, 4th, 7th, 8th, or 12th house of the <a href="https://www.astroved.com/kundali-report/" className="premium-text-link">birth chart</a>. These houses are closely connected with personality, family life, home, marriage, intimacy, and adjustment in relationships.</p>
+                        <p style={{ marginBottom: '15px' }}>The influence of Mars may be understood differently depending on the house:</p>
+                        <ul style={{ listStyleType: 'disc', paddingLeft: '20px', marginBottom: '15px', color: '#2D1854' }}>
+                            <li style={{ marginBottom: '10px' }}><span style={{ color: '#4a4a4a' }}><strong>1st House:</strong> May bring a strong, assertive temperament that can influence relationships.</span></li>
+                            <li style={{ marginBottom: '10px' }}><span style={{ color: '#4a4a4a' }}><strong>4th House:</strong> May affect domestic peace, emotional comfort, and harmony at home.</span></li>
+                            <li style={{ marginBottom: '10px' }}><span style={{ color: '#4a4a4a' }}><strong>7th House:</strong> Directly influences marriage, partnership, and the way one relates to a spouse.</span></li>
+                            <li style={{ marginBottom: '10px' }}><span style={{ color: '#4a4a4a' }}><strong>8th House:</strong> May influence intimacy, trust, shared responsibilities, and marital stability.</span></li>
+                            <li style={{ marginBottom: '0px' }}><span style={{ color: '#4a4a4a' }}><strong>12th House:</strong> May affect private life, emotional closeness, expenses, and adjustment between partners.</span></li>
+                        </ul>
+                        <p style={{ marginBottom: '0' }}>A Mars placement in these houses does not automatically indicate marital problems. Its actual influence depends on Mars's strength, sign, aspects, and the overall birth chart.</p>
+                    </div>
+                </div>
+
+                {/* Section 4: Effects on Marriage */}
+                <div>
+                    <h2 style={{ color: '#2D1854', fontSize: '24px', fontWeight: 'bold', marginBottom: '15px' }}>
+                        What Are the Effects of Mangal Dosha on Marriage and Relationships?
+                    </h2>
+                    <div style={{ color: '#4a4a4a', fontSize: '15px', lineHeight: '1.7' }}>
+                        <p style={{ marginBottom: '15px' }}>Mangal Dosha is traditionally examined for its possible influence on marriage, compatibility, and relationship harmony. When Mars is strong in sensitive relationship areas of the chart, its fiery nature may show through in married life.</p>
+                        <p style={{ marginBottom: '15px' }}><strong>Commonly associated effects may include:</strong></p>
+                        <ul style={{ listStyleType: 'disc', paddingLeft: '20px', marginBottom: '20px', color: '#2D1854' }}>
+                            <li style={{ marginBottom: '8px' }}><span style={{ color: '#4a4a4a' }}>Delay or obstacles in marriage</span></li>
+                            <li style={{ marginBottom: '8px' }}><span style={{ color: '#4a4a4a' }}>Frequent disagreements or impatience</span></li>
+                            <li style={{ marginBottom: '8px' }}><span style={{ color: '#4a4a4a' }}>Strong temper or dominant behavior</span></li>
+                            <li style={{ marginBottom: '8px' }}><span style={{ color: '#4a4a4a' }}>Difficulty adjusting with a partner</span></li>
+                            <li style={{ marginBottom: '8px' }}><span style={{ color: '#4a4a4a' }}>Emotional or physical distance</span></li>
+                            <li style={{ marginBottom: '8px' }}><span style={{ color: '#4a4a4a' }}>Stress in family or married life</span></li>
+                            <li style={{ marginBottom: '0' }}><span style={{ color: '#4a4a4a' }}>Challenges in maintaining harmony</span></li>
+                        </ul>
+                        
+                        <p style={{ marginBottom: '15px' }}>These effects are <strong>not the same for everyone.</strong> A well-supported Mars can also bring courage, loyalty, passion, and the strength to protect a relationship.</p>
+                        <p style={{ marginBottom: '15px' }}><strong>Mangal Dosha in a Girl</strong><br/>The same astrological rules apply. Its influence is judged from the complete horoscope, not gender alone.</p>
+                        <p style={{ marginBottom: '15px' }}><strong>Mangal Dosha in a Boy</strong><br/>The interpretation also depends on Mars’s strength, house placement, and the overall birth chart.</p>
+                        <p style={{ marginBottom: '0' }}>Having Mangal Dosha does not automatically mean an unhappy marriage. Other planetary combinations may reduce, balance, or even cancel its effects.</p>
+                    </div>
+                </div>
+
+                {/* Section 5: Can a Manglik Marry a Non-Manglik */}
+                <div>
+                    <h2 style={{ color: '#2D1854', fontSize: '24px', fontWeight: 'bold', marginBottom: '15px' }}>
+                        Can a Manglik Marry a Non-Manglik?
+                    </h2>
+                    <div style={{ color: '#4a4a4a', fontSize: '15px', lineHeight: '1.7' }}>
+                        <p style={{ marginBottom: '15px' }}><strong>Yes.</strong> A Manglik and a non-Manglik can be compatible when the overall birth charts support the match.</p>
+                        <p style={{ marginBottom: '15px' }}>Mangal Dosha is only one part of marriage compatibility. Astrologers also study the 7th house, Venus, Jupiter, Moon, Navamsa, Dashas, and the overall strength of both charts.</p>
+                        <p style={{ marginBottom: '0' }}>At AstroVed, Manglik status is viewed as part of the complete marriage compatibility picture, not as a single deciding factor.</p>
+                    </div>
+                </div>
+
+                {/* Section 6: When is Mangal Dosha Cancelled */}
+                <div>
+                    <h2 style={{ color: '#2D1854', fontSize: '24px', fontWeight: 'bold', marginBottom: '15px' }}>
+                        When Is Mangal Dosha Cancelled?
+                    </h2>
+                    <div style={{ color: '#4a4a4a', fontSize: '15px', lineHeight: '1.7' }}>
+                        <p style={{ marginBottom: '15px' }}>You may wonder if you can cancel your manglik condition. Yes, Mangal Dosha may be reduced or cancelled when certain supportive planetary combinations are present in the birth chart.</p>
+                        <p style={{ marginBottom: '15px' }}>Astrologers look at factors such as Mars&apos;s sign, strength, aspects, conjunctions, and the condition of marriage-related houses before deciding how strongly the Dosha applies.</p>
+                        <p style={{ marginBottom: '15px' }}>The idea that Mangal Dosha automatically disappears after <strong>age 28</strong> is not treated as a universal rule. The chart still needs to be examined individually.</p>
+                        <p style={{ marginBottom: '0' }}>An astrologer can review your complete horoscope to understand whether the Dosha is <strong>active, reduced, or cancelled</strong>, and what it may mean for your marriage.</p>
+                    </div>
+                </div>
+
+                {/* Section 7: Traditional Remedies */}
+                <div>
+                    <h2 style={{ color: '#2D1854', fontSize: '24px', fontWeight: 'bold', marginBottom: '15px' }}>
+                        What Are the Traditional Remedies for Mangal Dosha?
+                    </h2>
+                    <div style={{ color: '#4a4a4a', fontSize: '15px', lineHeight: '1.7' }}>
+                        <p style={{ marginBottom: '15px' }}><a href="https://www.astroved.com/dosha-pariharam/manglik-dosha-remedies/" className="premium-text-link">Traditional remedies for Mangal Dosha</a> are chosen based on how Mars is placed and supported in the birth chart. The aim is to balance Mars&apos;s influence rather than follow the same remedy for everyone.</p>
+                        <p style={{ marginBottom: '15px' }}><strong>Commonly recommended practices include:</strong></p>
+                        
+                        <ul style={{ listStyleType: 'disc', paddingLeft: '20px', marginBottom: '20px', color: '#2D1854' }}>
+                            <li style={{ marginBottom: '8px' }}><span style={{ color: '#4a4a4a' }}><strong><a href="https://www.astroved.com/planetary-fire-lab-mars-fire-lab-mars-planetary-blessings-homa--P52.aspx" className="premium-text-link">Mangal Shanti Homa</a> / Kuja Dosha Nivarana Homa</strong></span></li>
+                            <li style={{ marginBottom: '8px' }}><span style={{ color: '#4a4a4a' }}>Chanting Mars-related mantras</span></li>
+                            <li style={{ marginBottom: '8px' }}><span style={{ color: '#4a4a4a' }}><strong>Navagraha Homa</strong> for broader planetary support</span></li>
+                            <li style={{ marginBottom: '8px' }}><span style={{ color: '#4a4a4a' }}>Tuesday prayers with <a href="https://www.astroved.com/planets-mars-yantra-3-inch-p23.aspx" className="premium-text-link">mars yantra</a>, fasting, or charity</span></li>
+                            <li style={{ marginBottom: '8px' }}><span style={{ color: '#4a4a4a' }}>Worship of <strong>Lord Hanuman or Lord Muruga</strong></span></li>
+                            <li style={{ marginBottom: '0' }}><span style={{ color: '#4a4a4a' }}>Other <em>Pariharam</em> recommended after chart analysis</span></li>
+                        </ul>
+
+                        <div style={{
+                            backgroundColor: '#fff7ed',
+                            border: '1px solid #ffedd5',
+                            borderRadius: '12px',
+                            padding: '20px 25px',
+                            marginBottom: '20px',
+                            color: '#2a1a4a',
+                            fontSize: '15px',
+                            lineHeight: '1.6'
+                        }}>
+                            At AstroVed, <strong><a href="https://www.astroved.com/temple/chevvai-bhagavan-temple/" className="premium-text-link">Vedic Homas and Poojas</a></strong> are performed by experienced priests <strong>following traditional procedures</strong>, with options for personalized participation using your name and birth star.
+                        </div>
+
+                        <p style={{ marginBottom: '25px' }}>Since the right remedy depends on your individual horoscope, it is best to first understand <strong>whether Mangal Dosha is present, how strong it is, and whether any cancellation factors already apply.</strong></p>
+                    
+                        <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
+                            <a href="#explore" className="manglik-explore-btn" style={{
+                                display: 'inline-flex',
+                                alignItems: 'center',
+                                gap: '8px',
+                                backgroundColor: '#D47300',
+                                color: '#fff',
+                                padding: '12px 24px',
+                                borderRadius: '30px',
+                                textDecoration: 'none',
+                                fontWeight: '600',
+                                fontSize: '15px'
+                            }}>
+                                Explore Mangal Dosha Remedies
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" width="18" height="18">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                            <a href="#consult" className="manglik-consult-btn" style={{
+                                display: 'inline-flex',
+                                alignItems: 'center',
+                                gap: '8px',
+                                backgroundColor: 'transparent',
+                                border: '2px solid #D47300',
+                                color: '#D47300',
+                                padding: '10px 24px',
+                                borderRadius: '30px',
+                                textDecoration: 'none',
+                                fontWeight: '600',
+                                fontSize: '15px'
+                            }}>
+                                Consult Astrologer
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="18" height="18">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div className="info-content">
-                    <p>Manglik Dosha, also known as Mangal Dosh or Kuja Dosha, is one of the most significant placements
-                        in Vedic astrology, based on where Mars sits in your Kundli at the time of birth. Mars governs
-                        courage, intensity, and drive, and when placed in certain houses, Vedic tradition holds that
-                        these qualities carry into marriage and married life.</p>
-                    <p>It&apos;s not a curse or a flaw, just one placement worth understanding, especially if someone&apos;s
-                        already used the word &quot;Manglik&quot; around you.</p>
-                </div>
+
             </div>
-
-            
-            <div className="info-card orange-card">
-                <div className="info-bg-icon">
-                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="40" stroke="rgba(232, 110, 43, 0.1)" strokeWidth="1"
-                            strokeDasharray="2 4" />
-                        <circle cx="50" cy="50" r="28" stroke="rgba(232, 110, 43, 0.15)" strokeWidth="1" />
-                        <path d="M30 50 A 20 20 0 0 1 70 50 A 20 20 0 0 1 30 50 Z" stroke="rgba(232, 110, 43, 0.1)"
-                            strokeWidth="1" />
-                    </svg>
-                </div>
-                <div className="info-header">
-                    <div className="info-icon-wrapper orange-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
-                            stroke="#E86E2B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                            <path d="M22 12A10 4 0 0 1 2 12A10 4 0 0 1 22 12"></path>
-                            <circle cx="12" cy="12" r="6"></circle>
-                        </svg>
-                    </div>
-                    <div className="info-title-group">
-                        <h2 className="info-title">
-                            <span className="dark-purple">Why Mars</span><br />
-                            <span className="orange-text">Causes It</span>
-                        </h2>
-                        <div className="info-divider orange-divider">
-                            <span className="star">✦</span>
-                        </div>
-                    </div>
-                </div>
-                <div className="info-content">
-                    <p>In Vedic astrology, Mars (Mangal) is known as Angaraka - the fiery planet of energy, courage, and
-                        action. It&apos;s a powerful influence, but fire needs balance, especially in a partnership built on
-                        harmony. Manglik Dosha forms when Mars occupies specific houses in your Kundli, counted from the
-                        Lagna (Ascendant), Moon, or Venus: the 1st, 2nd, 4th, 7th, 8th, and 12th houses. Each of these
-                        houses governs an area close to marriage and family life, which is why Vedic astrologers pay
-                        particular attention to Mars&apos;s position there when reading a chart for compatibility.</p>
-                </div>
-            </div>
-
-            
-            <div className="info-card purple-card">
-                <div className="info-bg-icon">
-                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="40" stroke="rgba(104, 104, 249, 0.1)" strokeWidth="1"
-                            strokeDasharray="4 4" />
-                        <circle cx="50" cy="50" r="30" stroke="rgba(104, 104, 249, 0.15)" strokeWidth="1" />
-                        <path d="M50 35 C 65 20, 80 40, 50 70 C 20 40, 35 20, 50 35 Z" fill="rgba(104, 104, 249, 0.1)">
-                        </path>
-                        <path d="M48 35 L 53 45 L 47 55 L 52 65" stroke="#FFF" strokeWidth="2" fill="none"></path>
-                    </svg>
-                </div>
-                <div className="info-header">
-                    <div className="info-icon-wrapper purple-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
-                            stroke="#6868f9" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                            <path
-                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                            </path>
-                            <line x1="15" y1="9" x2="9" y2="15"></line>
-                        </svg>
-                    </div>
-                    <div className="info-title-group">
-                        <h2 className="info-title">
-                            <span className="dark-purple">Effects of</span><br />
-                            <span className="purple-text">Mangal (Manglik) Dosha</span>
-                        </h2>
-                        <div className="info-divider purple-divider">
-                            <span className="star">✦</span>
-                        </div>
-                    </div>
-                </div>
-                <div className="info-content">
-                    <p>Each house Mars occupies carries its own significance.</p>
-                    <p>In the 7th house - the Kalatra Bhava, or house of marriage - Mars brings its intensity directly
-                        into the partnership itself.</p>
-                    <p>In the 8th house, the Ayushya Bhava, its placement is read with more caution and traditionally
-                        warrants closer study.</p>
-                    <p>The 2nd house speaks to family and domestic life, the 4th to peace within the home, and the 12th
-                        to intimacy in marriage - so where Mars sits changes which part of married life it touches most.
-                    </p>
-                    <p>What stays constant across all of them is the underlying theme: Mars brings drive and
-                        independence, and Vedic astrology reads its placement as guidance on how that energy plays out
-                        between two people, not as a fixed outcome.</p>
-                </div>
-            </div>
-
-            
-            <div className="info-card red-card">
-                <div className="info-bg-icon">
-                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="40" stroke="rgba(219, 58, 52, 0.1)" strokeWidth="1"
-                            strokeDasharray="4 4" />
-                        <circle cx="50" cy="50" r="25" stroke="rgba(219, 58, 52, 0.15)" strokeWidth="1" />
-                        <path d="M50 15 L 55 45 L 85 50 L 55 55 L 50 85 L 45 55 L 15 50 L 45 45 Z"
-                            fill="rgba(219, 58, 52, 0.08)" />
-                    </svg>
-                </div>
-                <div className="info-header">
-                    <div className="info-icon-wrapper red-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
-                            stroke="#DB3A34" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                            <line x1="12" y1="1" x2="12" y2="23"></line>
-                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                        </svg>
-                    </div>
-                    <div className="info-title-group">
-                        <h2 className="info-title">
-                            <span className="dark-purple">Remedies of</span><br />
-                            <span className="red-text">Mangal Dosha (Kuja Dosha Nivarana)</span>
-                        </h2>
-                        <div className="info-divider red-divider">
-                            <span className="star">✦</span>
-                        </div>
-                    </div>
-                </div>
-                <div className="info-content">
-                    <p>Vedic astrology doesn&apos;t leave a Manglik placement unaddressed - a set of remedies, known as Kuja
-                        Dosha Nivarana, have been practiced for generations to bring Mars into balance:</p>
-                    <div className="effects-pill-grid">
-                        <div className="effect-pill">
-                            <div className="e-icon red-icon-bg">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                    fill="none" stroke="#DB3A34" strokeWidth="2">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
-                                    <path d="M2 12h20"></path>
-                                </svg>
-                            </div>
-                            <div className="e-text">Kumbh Vivah - a symbolic marriage to a tree or idol before the real
-                                wedding</div>
-                        </div>
-                        <div className="effect-pill">
-                            <div className="e-icon red-icon-bg">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                    fill="none" stroke="#DB3A34" strokeWidth="2">
-                                    <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z">
-                                    </path>
-                                    <polyline points="14 2 14 8 20 8"></polyline>
-                                </svg>
-                            </div>
-                            <div className="e-text">Worship of Hanuman to pacify Mars&apos;s intensity</div>
-                        </div>
-                        <div className="effect-pill">
-                            <div className="e-icon red-icon-bg">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                    fill="none" stroke="#DB3A34" strokeWidth="2">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <polyline points="12 6 12 12 16 14"></polyline>
-                                </svg>
-                            </div>
-                            <div className="e-text">Fasting on Tuesdays - Mars&apos;s day in the Vedic calendar</div>
-                        </div>
-                        <div className="effect-pill">
-                            <div className="e-icon red-icon-bg">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                    fill="none" stroke="#DB3A34" strokeWidth="2">
-                                    <path
-                                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <div className="e-text">Charity on Tuesdays - donating blood, feeding birds, or giving to those
-                                in need</div>
-                        </div>
-                        <div className="effect-pill">
-                            <div className="e-icon red-icon-bg">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                    fill="none" stroke="#DB3A34" strokeWidth="2">
-                                    <polygon
-                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                                    </polygon>
-                                </svg>
-                            </div>
-                            <div className="e-text">Coral (Moonga) Ring - worn on the ring finger of the right hand</div>
-                        </div>
-                        <div className="effect-pill">
-                            <div className="e-icon red-icon-bg">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                    fill="none" stroke="#DB3A34" strokeWidth="2">
-                                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                                </svg>
-                            </div>
-                            <div className="e-text">Marrying another Manglik - a natural cancellation of the Dosha</div>
-                        </div>
-                        <div className="effect-pill">
-                            <div className="e-icon red-icon-bg">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                    fill="none" stroke="#DB3A34" strokeWidth="2">
-                                    <path d="M12 2v20M12 2l3 3M12 2L9 5M5 7v4a7 7 0 0 0 14 0V7"></path>
-                                </svg>
-                            </div>
-                            <div className="e-text">Worship of Murugan (Kartikeya) for Kuja Dosha relief</div>
-                        </div>
-                        <div className="effect-pill">
-                            <div className="e-icon red-icon-bg">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                    fill="none" stroke="#DB3A34" strokeWidth="2">
-                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                    <circle cx="9" cy="7" r="4"></circle>
-                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                                </svg>
-                            </div>
-                            <div className="e-text">Mangal Shanti Homa - a formal fire ritual to pacify Mars&apos;s placement
-                            </div>
-                        </div>
-                    </div>
-                    <p style={{marginTop: '30px', fontSize: '14px', fontWeight: '500'}}>
-                        Not every remedy suits every chart - the right one depends on how Mars is placed and how strong
-                        its influence is, which is usually where a closer reading with an astrologer is worth having.
-                    </p>
-                </div>
-            </div>
-
-            
-            <div className="info-card green-card">
-                <div className="info-bg-icon">
-                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="40" stroke="rgba(22, 163, 74, 0.1)" strokeWidth="1"
-                            strokeDasharray="4 4" />
-                        <circle cx="50" cy="50" r="25" stroke="rgba(22, 163, 74, 0.15)" strokeWidth="1" />
-                        <path d="M35 50 L 45 60 L 65 40" stroke="rgba(22, 163, 74, 0.15)" strokeWidth="4"
-                            strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                </div>
-                <div className="info-header">
-                    <div className="info-icon-wrapper green-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
-                            stroke="#16A34A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                        </svg>
-                    </div>
-                    <div className="info-title-group">
-                        <h2 className="info-title">
-                            <span className="dark-purple">When Manglik Dosha</span><br />
-                            <span className="green-text">Gets Cancelled</span>
-                        </h2>
-                        <div className="info-divider green-divider">
-                            <span className="star">✦</span>
-                        </div>
-                    </div>
-                </div>
-                <div className="info-content">
-                    <p>Manglik Dosha isn&apos;t always permanent. Vedic astrology recognizes specific cancellation conditions
-                        known as Bhanga, where the effect is reduced or nullified entirely:</p>
-                    <div className="effects-pill-grid">
-                        <div className="effect-pill">
-                            <div className="e-icon green-icon-bg">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                    fill="none" stroke="#16A34A" strokeWidth="2">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <path d="M12 2v20"></path>
-                                    <path d="M2 12h20"></path>
-                                </svg>
-                            </div>
-                            <div className="e-text">Benefic aspects - Jupiter or Venus aspecting Mars balances its intensity
-                            </div>
-                        </div>
-                        <div className="effect-pill">
-                            <div className="e-icon green-icon-bg">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                    fill="none" stroke="#16A34A" strokeWidth="2">
-                                    <path d="M12 2l9 4-9 4-9-4 9-4z"></path>
-                                    <path d="M3 10v10l9 4 9-4V10"></path>
-                                </svg>
-                            </div>
-                            <div className="e-text">Mars in its own or exalted sign - Aries, Scorpio, or Capricorn</div>
-                        </div>
-                        <div className="effect-pill">
-                            <div className="e-icon green-icon-bg">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                    fill="none" stroke="#16A34A" strokeWidth="2">
-                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                    <circle cx="9" cy="7" r="4"></circle>
-                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                                </svg>
-                            </div>
-                            <div className="e-text">Both partners being Manglik - a widely followed principle</div>
-                        </div>
-                        <div className="effect-pill">
-                            <div className="e-icon green-icon-bg">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                    fill="none" stroke="#16A34A" strokeWidth="2">
-                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                                </svg>
-                            </div>
-                            <div className="e-text">Milder house placements - like the 12th house</div>
-                        </div>
-                        <div className="effect-pill">
-                            <div className="e-icon green-icon-bg">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                    fill="none" stroke="#16A34A" strokeWidth="2">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <polyline points="12 6 12 12 16 14"></polyline>
-                                </svg>
-                            </div>
-                            <div className="e-text">Performing a Homa - a Mangal Shanti Homa done correctly</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-    </>
-  );
+            <style>{`
+                .manglik-explore-btn {
+                    transition: all 0.3s ease !important;
+                }
+                .manglik-explore-btn:hover {
+                    transform: translateY(-3px);
+                    box-shadow: 0 6px 15px rgba(212, 115, 0, 0.4);
+                    background-color: #b36100 !important;
+                }
+                .manglik-consult-btn {
+                    transition: all 0.3s ease !important;
+                }
+                .manglik-consult-btn:hover {
+                    transform: translateY(-3px);
+                    box-shadow: 0 6px 15px rgba(212, 115, 0, 0.2);
+                    background-color: #fff9f0 !important;
+                    color: #b36100 !important;
+                    border-color: #b36100 !important;
+                }
+            `}</style>
+        </section>
+    );
 };
 
 export default ManglikInfo;

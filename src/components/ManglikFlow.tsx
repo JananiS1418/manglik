@@ -104,10 +104,10 @@ const ManglikFlow = () => {
     <>
       {errorMsg && (
         <div style={{
-          background: '#fee2e2', 
-          color: '#b91c1c', 
-          padding: '10px 20px', 
-          textAlign: 'center', 
+          background: '#fee2e2',
+          color: '#b91c1c',
+          padding: '10px 20px',
+          textAlign: 'center',
           fontWeight: '600',
           borderBottom: '1px solid #f87171'
         }}>
@@ -120,7 +120,7 @@ const ManglikFlow = () => {
         loadingText={loadingText}
       />
 
-      <div className="elegant-section-breaker" style={{ position: "relative", zIndex: 0 }}>
+      <div className="elegant-section-breaker" style={{ position: "relative", zIndex: 0, backgroundColor: "#FFFDFB", padding: "10px 0" }}>
         <svg
           width="100%"
           max-width="600"

@@ -30,22 +30,6 @@ const FAQ = () => {
                 
                 <div className={`faq-item ${activeIndex === 0 ? 'active' : ''}`} onClick={() => toggleFaq(0)}>
                     <div className="faq-question">
-                        <div className="faq-icon-group">
-                            <div className="faq-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                    <circle cx="12" cy="12" r="5"></circle>
-                                    <line x1="12" y1="1" x2="12" y2="3"></line>
-                                    <line x1="12" y1="21" x2="12" y2="23"></line>
-                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                                    <line x1="1" y1="12" x2="3" y2="12"></line>
-                                    <line x1="21" y1="12" x2="23" y2="12"></line>
-                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                                </svg>
-                            </div>
-                            <div className="faq-v-divider"></div>
-                        </div>
                         <h3 className="faq-q-text">Can Manglik Dosha be removed?</h3>
                         <button className="faq-toggle">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -64,15 +48,6 @@ const FAQ = () => {
                 
                 <div className={`faq-item ${activeIndex === 1 ? 'active' : ''}`} onClick={() => toggleFaq(1)}>
                     <div className="faq-question">
-                        <div className="faq-icon-group">
-                            <div className="faq-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                    <path d="M22 12A10 4 0 0 1 2 12A10 4 0 0 1 22 12"></path>
-                                    <circle cx="12" cy="12" r="6"></circle>
-                                </svg>
-                            </div>
-                            <div className="faq-v-divider"></div>
-                        </div>
                         <h3 className="faq-q-text">Is Manglik Dosha the same as Kuja Dosha or Mangal Dosh?</h3>
                         <button className="faq-toggle">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -92,16 +67,6 @@ const FAQ = () => {
                 
                 <div className={`faq-item ${activeIndex === 2 ? 'active' : ''}`} onClick={() => toggleFaq(2)}>
                     <div className="faq-question">
-                        <div className="faq-icon-group">
-                            <div className="faq-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                    <path d="M8 22L12 14L16 22"></path>
-                                    <path d="M12 14V4L9 9"></path>
-                                    <path d="M12 4L15 9"></path>
-                                </svg>
-                            </div>
-                            <div className="faq-v-divider"></div>
-                        </div>
                         <h3 className="faq-q-text">What is Anshik (Partial) Manglik?</h3>
                         <button className="faq-toggle">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -121,18 +86,6 @@ const FAQ = () => {
                 
                 <div className={`faq-item ${activeIndex === 3 ? 'active' : ''}`} onClick={() => toggleFaq(3)}>
                     <div className="faq-question">
-                        <div className="faq-icon-group">
-                            <div className="faq-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                    <polygon points="12 2 2 7 12 22 22 7 12 2"></polygon>
-                                    <polyline points="2 7 12 7 22 7"></polyline>
-                                    <polyline points="12 22 12 7"></polyline>
-                                    <polyline points="7 7 12 2"></polyline>
-                                    <polyline points="17 7 12 2"></polyline>
-                                </svg>
-                            </div>
-                            <div className="faq-v-divider"></div>
-                        </div>
                         <h3 className="faq-q-text">Is Manglik Dosha the same for boys and girls?</h3>
                         <button className="faq-toggle">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -152,16 +105,6 @@ const FAQ = () => {
                 
                 <div className={`faq-item ${activeIndex === 4 ? 'active' : ''}`} onClick={() => toggleFaq(4)}>
                     <div className="faq-question">
-                        <div className="faq-icon-group">
-                            <div className="faq-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                                    <path d="M12 8v8"></path>
-                                    <path d="M8 12l4 4 4-4"></path>
-                                </svg>
-                            </div>
-                            <div className="faq-v-divider"></div>
-                        </div>
                         <h3 className="faq-q-text">Does Manglik Dosha cancel after 28 years?</h3>
                         <button className="faq-toggle">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -182,20 +125,6 @@ const FAQ = () => {
                 
                 <div className={`faq-item ${activeIndex === 5 ? 'active' : ''}`} onClick={() => toggleFaq(5)}>
                     <div className="faq-question">
-                        <div className="faq-icon-group">
-                            <div className="faq-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                                    <line x1="16" y1="2" x2="16" y2="6"></line>
-                                    <line x1="8" y1="2" x2="8" y2="6"></line>
-                                    <line x1="3" y1="10" x2="21" y2="10"></line>
-                                    <path d="M8 14h.01"></path>
-                                    <path d="M12 14h.01"></path>
-                                    <path d="M16 14h.01"></path>
-                                </svg>
-                            </div>
-                            <div className="faq-v-divider"></div>
-                        </div>
                         <h3 className="faq-q-text">Can two Manglik people marry each other?</h3>
                         <button className="faq-toggle">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

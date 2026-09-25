@@ -20,13 +20,6 @@ const Features = () => {
         </div>
 
         <div className="gf-header">
-            <div className="gf-star-divider">
-                <div className="gf-sd-line left"></div>
-                <div className="gf-sd-circle">
-                    <span className="gf-star">✦</span>
-                </div>
-                <div className="gf-sd-line right"></div>
-            </div>
             <h2 className="gf-title">Why Choose <span className="purple-text">Mangal Dosha</span> Guidance from AstroVed?</h2>
         </div>
 
@@ -34,13 +27,9 @@ const Features = () => {
             <div className="gf-box">
                 
                 <div className="gf-item anim-zoom">
-                    <div className="gf-icon-wrapper">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            <polygon
-                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                            </polygon>
-                        </svg>
+                    <div className="gf-image-container">
+                        <span className="gf-number-badge">01</span>
+                        <img src="/images/guidance-1.png" alt="Vedic astrology practice" className="gf-image" />
                     </div>
                     <h3 className="gf-item-title">25+ years of Vedic astrology practice</h3>
                     <div className="gf-h-divider">
@@ -52,12 +41,9 @@ const Features = () => {
 
                 
                 <div className="gf-item anim-glow">
-                    <div className="gf-icon-wrapper">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="12" cy="7" r="4"></circle>
-                        </svg>
+                    <div className="gf-image-container">
+                        <span className="gf-number-badge">02</span>
+                        <img src="/images/guidance-2.png" alt="Real astrologers" className="gf-image" />
                     </div>
                     <h3 className="gf-item-title">Real astrologers, not just automated results</h3>
                     <div className="gf-h-divider">
@@ -69,13 +55,9 @@ const Features = () => {
 
                 
                 <div className="gf-item anim-bounce">
-                    <div className="gf-icon-wrapper">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            <path
-                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                            </path>
-                        </svg>
+                    <div className="gf-image-container">
+                        <span className="gf-number-badge">03</span>
+                        <img src="/images/guidance-3.png" alt="Remedies performed with tradition" className="gf-image" />
                     </div>
                     <h3 className="gf-item-title">Remedies performed with tradition and care</h3>
                     <div className="gf-h-divider">
@@ -87,11 +69,9 @@ const Features = () => {
 
                 
                 <div className="gf-item anim-pulse">
-                    <div className="gf-icon-wrapper">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                        </svg>
+                    <div className="gf-image-container">
+                        <span className="gf-number-badge">04</span>
+                        <img src="/images/guidance-4.png" alt="Trusted across generations" className="gf-image" />
                     </div>
                     <h3 className="gf-item-title">Trusted across generations</h3>
                     <div className="gf-h-divider">
@@ -103,12 +83,9 @@ const Features = () => {
 
                 
                 <div className="gf-item anim-tick">
-                    <div className="gf-icon-wrapper">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                        </svg>
+                    <div className="gf-image-container">
+                        <span className="gf-number-badge">05</span>
+                        <img src="/images/guidance-5.png" alt="100% confidential" className="gf-image" />
                     </div>
                     <h3 className="gf-item-title">100% confidential</h3>
                     <div className="gf-h-divider">
