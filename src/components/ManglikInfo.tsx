@@ -98,7 +98,7 @@ const ManglikInfo = () => {
                             <li style={{ marginBottom: '10px' }}><span style={{ color: '#4a4a4a' }}><strong>8th House:</strong> May influence intimacy, trust, shared responsibilities, and marital stability.</span></li>
                             <li style={{ marginBottom: '0px' }}><span style={{ color: '#4a4a4a' }}><strong>12th House:</strong> May affect private life, emotional closeness, expenses, and adjustment between partners.</span></li>
                         </ul>
-                        <p style={{ marginBottom: '0' }}>A Mars placement in these houses does not automatically indicate marital problems. Its actual influence depends on Mars's strength, sign, aspects, and the overall birth chart.</p>
+                        <p style={{ marginBottom: '0' }}>A Mars placement in these houses does not automatically indicate marital problems. Its actual influence depends on Mars&apos;s strength, sign, aspects, and the overall birth chart.</p>
                     </div>
                 </div>
 
