@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react';
 
-import { ManglikResult } from './ManglikFlow';
+import { ManglikResult } from './ManglikCalculator';
 
 interface ResultProps {
     isVisible: boolean;
@@ -106,7 +106,7 @@ const Result = ({ isVisible, isManglik, result }: ResultProps) => {
                                                     <p>To understand other astrological factors that may affect your marriage and compatibility.</p>
                                                 </div>
                                             </div>
-                                            <a href="https://www.astroved.com/astrovedspeaks/" className="btn-talk-negative">
+                                            <a href="https://www.astroved.com/astrovedspeaks/" target="_blank" rel="noopener noreferrer" className="btn-talk-negative">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
                                                     fill="none" stroke="currentColor" strokeWidth="2" className="talk-icon">
                                                     <path
@@ -200,7 +200,7 @@ const Result = ({ isVisible, isManglik, result }: ResultProps) => {
                                                         suitable remedies.</p>
                                                 </div>
                                             </div>
-                                            <a href="https://www.astroved.com/astrovedspeaks/" className="btn-talk-positive-banner">
+                                            <a href="https://www.astroved.com/astrovedspeaks/" target="_blank" rel="noopener noreferrer" className="btn-talk-positive-banner">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
                                                     fill="none" stroke="currentColor" strokeWidth="2" className="talk-icon">
                                                     <path
@@ -578,7 +578,7 @@ const Result = ({ isVisible, isManglik, result }: ResultProps) => {
                                                 situation.</p>
                                         </div>
                                     </div>
-                                    <a href="https://www.astroved.com/astrovedspeaks/" className="btn-talk-positive">Talk to astrologer &rarr;</a>
+                                    <a href="https://www.astroved.com/astrovedspeaks/" target="_blank" rel="noopener noreferrer" className="btn-talk-positive">Talk to astrologer &rarr;</a>
                                 </div>
                             </div>
                         </div>
@@ -632,7 +632,7 @@ const Result = ({ isVisible, isManglik, result }: ResultProps) => {
                                     </div>
                                     <h4 className="homa-card-title">Mangal Santhi Homa</h4>
                                     <p className="homa-card-subtitle">(Mars Pacification Homa)</p>
-                                    <a href="https://www.astroved.com/-P52.aspx" className="homa-btn">View Details &rarr;</a>
+                                    <a href="https://www.astroved.com/-P52.aspx" target="_blank" rel="noopener noreferrer" className="homa-btn">View Details &rarr;</a>
                                 </div>
                             </div>
 
@@ -652,7 +652,7 @@ const Result = ({ isVisible, isManglik, result }: ResultProps) => {
                                     </div>
                                     <h4 className="homa-card-title">Hanuman Homa</h4>
                                     <p className="homa-card-subtitle">(Homa for Strength, Courage and Protection)</p>
-                                    <a href="https://www.astroved.com/-P68.aspx" className="homa-btn">View Details &rarr;</a>
+                                    <a href="https://www.astroved.com/-P68.aspx" target="_blank" rel="noopener noreferrer" className="homa-btn">View Details &rarr;</a>
                                 </div>
                             </div>
 
@@ -679,7 +679,7 @@ const Result = ({ isVisible, isManglik, result }: ResultProps) => {
                                     </div>
                                     <h4 className="homa-card-title">Valli Murugan Homa</h4>
                                     <p className="homa-card-subtitle">(Homa for Murugan and his consorts Valli and Devayani)</p>
-                                    <a href="https://www.astroved.com/-P64969.aspx" className="homa-btn">View Details &rarr;</a>
+                                    <a href="https://www.astroved.com/-P64969.aspx" target="_blank" rel="noopener noreferrer" className="homa-btn">View Details &rarr;</a>
                                 </div>
                             </div>
                         </div>
@@ -735,7 +735,7 @@ const Result = ({ isVisible, isManglik, result }: ResultProps) => {
                                             <p style={{ color: '#475569', fontSize: '14px', lineHeight: '1.6', marginBottom: '25px', flexGrow: 1 }}>
                                                 Find out if Sarpa Dosha is present in your horoscope and get insights on its effects and remedies.
                                             </p>
-                                            <a href="https://www.astroved.com/astropedia/en/freetools/naga-dosha" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px', background: '#d56615', color: '#ffffff', padding: '12px 30px', borderRadius: '30px', textDecoration: 'none', fontWeight: '600', fontSize: '15px', transition: 'background 0.3s ease', margin: '0 auto' }}>
+                                            <a href="https://www.astroved.com/astropedia/en/freetools/naga-dosha" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px', background: '#d56615', color: '#ffffff', padding: '12px 30px', borderRadius: '30px', textDecoration: 'none', fontWeight: '600', fontSize: '15px', transition: 'background 0.3s ease', margin: '0 auto' }}>
                                                 View Details
                                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" /></svg>
                                             </a>
@@ -768,7 +768,7 @@ const Result = ({ isVisible, isManglik, result }: ResultProps) => {
                                             <p style={{ color: '#475569', fontSize: '14px', lineHeight: '1.6', marginBottom: '25px', flexGrow: 1 }}>
                                                 Match two horoscopes to check compatibility and assess the strength of your relationship.
                                             </p>
-                                            <a href="https://www.astroved.com/astropedia/en/freetools/horoscope-matching" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px', background: '#c1215b', color: '#ffffff', padding: '12px 30px', borderRadius: '30px', textDecoration: 'none', fontWeight: '600', fontSize: '15px', transition: 'background 0.3s ease', margin: '0 auto' }}>
+                                            <a href="https://www.astroved.com/astropedia/en/freetools/horoscope-matching" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px', background: '#c1215b', color: '#ffffff', padding: '12px 30px', borderRadius: '30px', textDecoration: 'none', fontWeight: '600', fontSize: '15px', transition: 'background 0.3s ease', margin: '0 auto' }}>
                                                 View Details
                                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" /></svg>
                                             </a>
@@ -802,7 +802,7 @@ const Result = ({ isVisible, isManglik, result }: ResultProps) => {
                                             <p style={{ color: '#475569', fontSize: '14px', lineHeight: '1.6', marginBottom: '25px', flexGrow: 1 }}>
                                                 Understand your marriage compatibility based on planetary positions and build a strong and harmonious life together.
                                             </p>
-                                            <a href="https://www.astroved.com/astropedia/en/freetools/marriage-compatibility" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px', background: '#2c8253', color: '#ffffff', padding: '12px 30px', borderRadius: '30px', textDecoration: 'none', fontWeight: '600', fontSize: '15px', transition: 'background 0.3s ease', margin: '0 auto' }}>
+                                            <a href="https://www.astroved.com/astropedia/en/freetools/marriage-compatibility" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px', background: '#2c8253', color: '#ffffff', padding: '12px 30px', borderRadius: '30px', textDecoration: 'none', fontWeight: '600', fontSize: '15px', transition: 'background 0.3s ease', margin: '0 auto' }}>
                                                 View Details
                                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" /></svg>
                                             </a>
@@ -828,7 +828,7 @@ const Result = ({ isVisible, isManglik, result }: ResultProps) => {
                         <h2 className="cta-banner-title">Feeling Unsure About Choosing the Right Remedy?</h2>
                         <p className="cta-banner-desc">Talk to an astrologer for clear guidance on the remedies that best match your birth chart and marriage concerns.</p>
 
-                        <a href="https://www.astroved.com/astrovedspeaks/" className="btn-consult-astrologer">
+                        <a href="https://www.astroved.com/astrovedspeaks/" target="_blank" rel="noopener noreferrer" className="btn-consult-astrologer">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="consult-chat-icon">
                                 <path
                                     d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
@@ -858,7 +858,7 @@ const Result = ({ isVisible, isManglik, result }: ResultProps) => {
                         <h2 className="cta-banner-title">Go Beyond Tools. Get Real Guidance.</h2>
                         <p className="cta-banner-desc">Talk to an astrologer for a clearer understanding of your marriage prospects, compatibility, and the astrological factors influencing them.</p>
 
-                        <a href="https://www.astroved.com/astrovedspeaks/" className="btn-consult-astrologer">
+                        <a href="https://www.astroved.com/astrovedspeaks/" target="_blank" rel="noopener noreferrer" className="btn-consult-astrologer">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="consult-chat-icon">
                                 <path
                                     d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">

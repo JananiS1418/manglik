@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Hero from "./Hero";
 import Result from "./Result";
 
@@ -25,15 +25,47 @@ export interface ManglikResult {
   remedies?: string;
 }
 
-const ManglikFlow = () => {
+const ManglikCalculator = () => {
   const [isCalculating, setIsCalculating] = useState(false);
   const [showResult, setShowResult] = useState(false);
   const [isManglik, setIsManglik] = useState(false);
   const [resultData, setResultData] = useState<ManglikResult | null>(null);
-  const [loadingText, setLoadingText] = useState(
-    "Calculate Manglik Dosha"
-  );
+  const [loadingText, setLoadingText] = useState("Calculate Manglik Dosha");
   const [errorMsg, setErrorMsg] = useState("");
+
+  const isInitialMount = useRef(true);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const savedShowResult = sessionStorage.getItem("manglikShowResult");
+      const savedIsManglik = sessionStorage.getItem("manglikIsManglik");
+      const savedResultData = sessionStorage.getItem("manglikResultData");
+
+      if (savedShowResult === "true" && savedResultData) {
+        try {
+          setResultData(JSON.parse(savedResultData));
+          setIsManglik(savedIsManglik === "true");
+          setShowResult(true);
+        } catch (e) {
+          console.error("Error parsing saved result:", e);
+        }
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+      return;
+    }
+    if (typeof window !== "undefined") {
+      sessionStorage.setItem("manglikShowResult", showResult.toString());
+      sessionStorage.setItem("manglikIsManglik", isManglik.toString());
+      if (resultData) {
+        sessionStorage.setItem("manglikResultData", JSON.stringify(resultData));
+      }
+    }
+  }, [showResult, isManglik, resultData]);
 
   const handleCalculate = async (formData: ManglikFormData) => {
     if (isCalculating) return;
@@ -192,4 +224,4 @@ const ManglikFlow = () => {
   );
 };
 
-export default ManglikFlow;
+export default ManglikCalculator;

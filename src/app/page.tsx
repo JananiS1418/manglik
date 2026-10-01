@@ -1,5 +1,5 @@
 import Navbar from "@/components/Navbar";
-import ManglikFlow from "@/components/ManglikFlow";
+import ManglikCalculator from "@/components/ManglikCalculator";
 import ManglikInfo from "@/components/ManglikInfo";
 import Features from "@/components/Features";
 import FAQ from "@/components/FAQ";
@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <ManglikFlow />
+      <ManglikCalculator />
       <ManglikInfo />
       <Features />
       <FAQ />

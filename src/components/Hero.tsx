@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import CustomSelect from "./CustomSelect";
+import DropdownField from "./DropdownField";
 
 export interface ManglikFormData {
     day: string;
@@ -37,6 +37,36 @@ const Hero = ({
         country: "",
         city: "",
     });
+
+    const isInitialMount = useRef(true);
+
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            const savedData = sessionStorage.getItem("manglikFormData");
+            if (savedData) {
+                try {
+                    const parsedData = JSON.parse(savedData);
+                    setFormData(parsedData);
+                    if (parsedData.city) {
+                        setCitySearchText(parsedData.city);
+                        setIsCitySelected(true);
+                    }
+                } catch (e) {
+                    console.error("Error parsing saved form data:", e);
+                }
+            }
+        }
+    }, []);
+
+    useEffect(() => {
+        if (isInitialMount.current) {
+            isInitialMount.current = false;
+            return;
+        }
+        if (typeof window !== "undefined") {
+            sessionStorage.setItem("manglikFormData", JSON.stringify(formData));
+        }
+    }, [formData]);
 
     const days = Array.from({ length: 31 }, (_, i) => ({
         label: String(i + 1).padStart(2, "0"),
@@ -305,16 +335,25 @@ const Hero = ({
                         __html: `
               @media (min-width: 992px) {
                   .hero-header-content .hero-title {
-                      margin-top: 100px !important;
+                      margin-top: 80px !important;
+                      line-height: 1.1 !important;
+                  }
+                  .hero-header-content .hero-title span {
+                      display: block;
                   }
 
                   .hero-header-content .title-divider {
-                      margin-top: 35px !important;
-                      margin-bottom: 35px !important;
+                      margin-top: 25px !important;
+                      margin-bottom: 25px !important;
+                  }
+
+                  .hero-header-content .hero-subtitle {
+                      line-height: 1.4 !important;
+                      font-size: 18px !important;
                   }
 
                   .calculator-card.luxury-card {
-                      margin-top: 60px !important;
+                      margin-top: 30px !important;
                   }
               }
 
@@ -478,7 +517,7 @@ const Hero = ({
                                     </label>
 
                                     <div className="input-group col-3 luxury-input">
-                                        <CustomSelect
+                                        <DropdownField
                                             value={formData.day}
                                             onChange={(value) => {
                                                 setFormData({
@@ -491,7 +530,7 @@ const Hero = ({
                                             placeholder="Day"
                                         />
 
-                                        <CustomSelect
+                                        <DropdownField
                                             value={formData.month}
                                             onChange={(value) => {
                                                 setFormData({
@@ -504,7 +543,7 @@ const Hero = ({
                                             placeholder="Month"
                                         />
 
-                                        <CustomSelect
+                                        <DropdownField
                                             value={formData.year}
                                             onChange={(value) => {
                                                 setFormData({
@@ -553,7 +592,7 @@ const Hero = ({
                                     </label>
 
                                     <div className="input-group col-4 luxury-input">
-                                        <CustomSelect
+                                        <DropdownField
                                             value={formData.hour}
                                             onChange={(value) => {
                                                 setFormData({
@@ -566,7 +605,7 @@ const Hero = ({
                                             placeholder="Hour"
                                         />
 
-                                        <CustomSelect
+                                        <DropdownField
                                             value={formData.minute}
                                             onChange={(value) => {
                                                 setFormData({
@@ -579,7 +618,7 @@ const Hero = ({
                                             placeholder="Minute"
                                         />
 
-                                        <CustomSelect
+                                        <DropdownField
                                             value={formData.second}
                                             onChange={(value) => {
                                                 setFormData({
@@ -592,7 +631,7 @@ const Hero = ({
                                             placeholder="Second"
                                         />
 
-                                        <CustomSelect
+                                        <DropdownField
                                             value={formData.ampm}
                                             onChange={(value) => {
                                                 setFormData({
@@ -643,7 +682,7 @@ const Hero = ({
                                     </label>
 
                                     <div className="input-group luxury-input">
-                                        <CustomSelect
+                                        <DropdownField
                                             value={formData.country}
                                             onChange={(value) => {
                                                 setIsCountryManuallySet(true);

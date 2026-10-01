@@ -8,7 +8,7 @@ export interface Option {
   disabled?: boolean;
 }
 
-interface CustomSelectProps {
+interface DropdownFieldProps {
   id?: string;
   value: string;
   onChange: (value: string) => void;
@@ -17,7 +17,7 @@ interface CustomSelectProps {
   searchable?: boolean;
 }
 
-const CustomSelect = ({ id, value, onChange, options, placeholder = "", searchable = false }: CustomSelectProps) => {
+const DropdownField = ({ id, value, onChange, options, placeholder = "", searchable = false }: DropdownFieldProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const wrapperRef = useRef<HTMLDivElement>(null);
@@ -147,4 +147,4 @@ const CustomSelect = ({ id, value, onChange, options, placeholder = "", searchab
   );
 };
 
-export default CustomSelect;
+export default DropdownField;
