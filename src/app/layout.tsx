@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import React, { ReactNode } from "react";
+import Script from "next/script";
 import "./globals.css";
 import '../styles/navbar.css';
 import '../styles/calculator.css';
@@ -87,7 +88,9 @@ const RootLayout = ({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
         />
-        <script
+        <Script
+          id="robots-script"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               if (window.location.search && window.location.search.length > 1) {
@@ -99,7 +102,9 @@ const RootLayout = ({
         />
 
 
-        <script
+        <Script
+          id="gtm-script"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               (function (w, d, s, l, i) {
@@ -118,7 +123,9 @@ const RootLayout = ({
             `,
           }}
         />
-        <script
+        <Script
+          id="gtm-datalayer"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               function getCookie(name) {
@@ -152,12 +159,13 @@ const RootLayout = ({
         </noscript>
 
 
-        <script
+        <Script
+          id="jquery-script"
           src="https://code.jquery.com/jquery-3.7.1.min.js"
           integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
           crossOrigin="anonymous"
-          defer
-        ></script>
+          strategy="lazyOnload"
+        />
         {children}
       </body>
     </html>
