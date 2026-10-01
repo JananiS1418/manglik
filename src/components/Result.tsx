@@ -50,6 +50,55 @@ const Result = ({ isVisible, isManglik, result }: ResultProps) => {
 
     return (
         <>
+            <style dangerouslySetInnerHTML={{ __html: `
+            .check-profile-link {
+                margin-top: 20px;
+                cursor: pointer;
+                font-weight: 600;
+                font-size: 15px;
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+                position: relative;
+                transition: all 0.3s ease;
+            }
+            .check-profile-link svg {
+                transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            }
+            .check-profile-link:hover svg {
+                transform: translateX(4px);
+            }
+            .check-profile-link::after {
+                content: '';
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+                width: 0%;
+                height: 1.5px;
+                transition: width 0.3s ease;
+            }
+            .check-profile-link:hover::after {
+                width: 100%;
+            }
+            .cpl-green {
+                color: #15803d;
+            }
+            .cpl-green::after {
+                background-color: #16a34a;
+            }
+            .cpl-green:hover {
+                color: #16a34a;
+            }
+            .cpl-red {
+                color: #b91c1c;
+            }
+            .cpl-red::after {
+                background-color: #dc2626;
+            }
+            .cpl-red:hover {
+                color: #dc2626;
+            }
+            `}} />
             <section id="resultSection" className="result-section animated">
 
                 <div id="successParticles" className="particles-container"></div>
@@ -85,6 +134,13 @@ const Result = ({ isVisible, isManglik, result }: ResultProps) => {
                                             </div>
                                             <p className="nm-result-desc">Great! As per the calculated positions of Mars in your birth
                                                 chart, you are not affected by Manglik Dosha.</p>
+                                            <div 
+                                                onClick={() => { document.querySelector('.hero-section')?.scrollIntoView({ behavior: 'smooth' }) || window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+                                                className="check-profile-link cpl-green"
+                                            >
+                                                Check another profile
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -106,7 +162,7 @@ const Result = ({ isVisible, isManglik, result }: ResultProps) => {
                                                     <p>To understand other astrological factors that may affect your marriage and compatibility.</p>
                                                 </div>
                                             </div>
-                                            <a href="https://www.astroved.com/astrovedspeaks/" target="_blank" rel="noopener noreferrer" className="btn-talk-negative">
+                                            <a href="https://www.astroved.com/astrovedspeaks/?promo=AVP_Manglik_AstroVed_Speaks" target="_blank" rel="noopener noreferrer" className="btn-talk-negative">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
                                                     fill="none" stroke="currentColor" strokeWidth="2" className="talk-icon">
                                                     <path
@@ -180,6 +236,13 @@ const Result = ({ isVisible, isManglik, result }: ResultProps) => {
                                             </div>
                                             <p className="mpb-result-desc">As per the calculated positions of Mars in your birth chart,
                                                 you are affected by Manglik Dosha.</p>
+                                            <div 
+                                                onClick={() => { document.querySelector('.hero-section')?.scrollIntoView({ behavior: 'smooth' }) || window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+                                                className="check-profile-link cpl-red"
+                                            >
+                                                Check another profile
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                                            </div>
                                         </div>
                                     </div>
                                     <div className="mpb-right-col">
@@ -200,7 +263,7 @@ const Result = ({ isVisible, isManglik, result }: ResultProps) => {
                                                         suitable remedies.</p>
                                                 </div>
                                             </div>
-                                            <a href="https://www.astroved.com/astrovedspeaks/" target="_blank" rel="noopener noreferrer" className="btn-talk-positive-banner">
+                                            <a href="https://www.astroved.com/astrovedspeaks/?promo=AVP_Manglik_AstroVed_Speaks" target="_blank" rel="noopener noreferrer" className="btn-talk-positive-banner">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
                                                     fill="none" stroke="currentColor" strokeWidth="2" className="talk-icon">
                                                     <path
@@ -249,7 +312,8 @@ const Result = ({ isVisible, isManglik, result }: ResultProps) => {
                     </>)}
 
 
-                    <div className="astrological-identity-banner"
+                    {false && (<>
+                        <div className="astrological-identity-banner"
                         style={{ background: '#ffffff', borderRadius: '12px', padding: '25px 40px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', maxWidth: '1100px', margin: '15px auto 0 auto', boxShadow: '0 4px 15px rgba(0,0,0,0.03)', border: '1px solid #fcedda', position: 'relative', overflow: 'hidden', flexWrap: 'nowrap', gap: '20px' }}>
 
 
@@ -478,6 +542,7 @@ const Result = ({ isVisible, isManglik, result }: ResultProps) => {
                     }
                 }
             ` }} />
+                    </>)}
 
                     {isManglik && (<>
 
@@ -578,11 +643,94 @@ const Result = ({ isVisible, isManglik, result }: ResultProps) => {
                                                 situation.</p>
                                         </div>
                                     </div>
-                                    <a href="https://www.astroved.com/astrovedspeaks/" target="_blank" rel="noopener noreferrer" className="btn-talk-positive">Talk to astrologer &rarr;</a>
+                                    <a href="https://www.astroved.com/astrovedspeaks/?promo=AVP_Manglik_AstroVed_Speaks" target="_blank" rel="noopener noreferrer" className="btn-talk-positive">Talk to astrologer &rarr;</a>
                                 </div>
                             </div>
                         </div>
                     </>)}
+                    
+                    <div className="astrological-identity-banner"
+                         style={{ background: '#ffffff', borderRadius: '12px', padding: '25px 40px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', maxWidth: '1100px', margin: isManglik ? '-20px auto 70px auto' : '10px auto 20px auto', boxShadow: '0 4px 15px rgba(0,0,0,0.03)', border: '1px solid #fcedda', position: 'relative', overflow: 'hidden', flexWrap: 'nowrap', gap: '20px' }}>
+                        <div className="ai-banner-decor-left" style={{ flexShrink: '0', display: 'flex', alignItems: 'center' }}>
+                            <svg width="48" height="48" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="18" stroke="#d97706" strokeWidth="2.5" />
+                                <path d="M50 15 L50 25 M50 75 L50 85 M15 50 L25 50 M75 50 L85 50 M25 25 L32 32 M68 68 L75 75 M25 75 L32 68 M68 25 L75 32" stroke="#d97706" strokeWidth="2" strokeLinecap="round" />
+                                <path d="M50 38 L53 47 L62 50 L53 53 L50 62 L47 53 L38 50 L47 47 Z" fill="#d97706" />
+                                <circle cx="20" cy="20" r="2" fill="#d97706" />
+                                <circle cx="80" cy="20" r="1.5" fill="#d97706" />
+                                <circle cx="20" cy="80" r="1.5" fill="#d97706" />
+                                <circle cx="80" cy="80" r="2" fill="#d97706" />
+                            </svg>
+                        </div>
+                        <div className="ai-banner-divider ai-hide-mobile" style={{ width: '1px', height: '50px', background: '#e2e8f0' }}></div>
+                        <div className="ai-banner-title" style={{ flexGrow: '1', minWidth: '200px' }}>
+                            <h2 style={{ fontSize: '24px', color: '#1e3a8a', fontFamily: '\'Playfair Display\', serif', margin: '0 0 4px 0', fontWeight: '700' }}>Your Astrological Identity</h2>
+                            <p style={{ color: '#64748b', fontSize: '14px', margin: '0' }}>These key details are used for your Manglik analysis.</p>
+                        </div>
+                        <div className="ai-banner-divider ai-hide-mobile" style={{ width: '1px', height: '50px', background: '#e2e8f0' }}></div>
+                        <div className="ai-banner-item" style={{ display: 'flex', alignItems: 'center', gap: '15px', flexShrink: '0' }}>
+                            <div className="ai-banner-icon" style={{ width: '48px', height: '48px', borderRadius: '50%', background: '#f3efff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="#4c1d95" stroke="none">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                            </div>
+                            <div className="ai-banner-text" style={{ textAlign: 'left' }}>
+                                <div style={{ color: '#64748b', fontSize: '12px', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '2px' }}>MOON SIGN</div>
+                                <div style={{ color: '#1e3a8a', fontSize: '20px', fontFamily: '\'Playfair Display\', serif', fontWeight: '700' }} id="resultMoonSign">{result?.moonSign}</div>
+                            </div>
+                        </div>
+                        <div className="ai-banner-divider ai-hide-mobile" style={{ width: '1px', height: '50px', background: '#e2e8f0' }}></div>
+                        <div className="ai-banner-item" style={{ display: 'flex', alignItems: 'center', gap: '15px', flexShrink: '0', zIndex: '1' }}>
+                            <div className="ai-banner-icon" style={{ width: '48px', height: '48px', borderRadius: '50%', background: '#fef3c7', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="#d97706" stroke="none">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                </svg>
+                            </div>
+                            <div className="ai-banner-text" style={{ textAlign: 'left' }}>
+                                <div style={{ color: '#64748b', fontSize: '12px', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '2px' }}>BIRTH STAR</div>
+                                <div style={{ color: '#1e3a8a', fontSize: '20px', fontFamily: '\'Playfair Display\', serif', fontWeight: '700' }} id="resultBirthStar">{result?.birthStar}</div>
+                            </div>
+                        </div>
+                        <div className="ai-banner-decor-right" style={{ position: 'absolute', right: '0', top: '0', height: '100%', width: '200px', pointerEvents: 'none', zIndex: '0', overflow: 'hidden', borderRadius: '0 12px 12px 0' }}>
+                            <svg width="100%" height="100%" viewBox="0 0 200 120" preserveAspectRatio="xMaxYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M 120 -10 A 70 70 0 1 1 120 130 A 60 60 0 1 0 120 -10 Z" fill="#faebd7" />
+                                <path d="M 180 20 Q 185 20 185 15 Q 185 20 190 20 Q 185 20 185 25 Q 185 20 180 20 Z" fill="#faebd7" />
+                                <circle cx="185" cy="100" r="5" fill="#faebd7" />
+                                <circle cx="70" cy="40" r="4" fill="#faebd7" />
+                            </svg>
+                        </div>
+                    </div>
+                    <style dangerouslySetInnerHTML={{
+                        __html: `
+                        @keyframes spinSlow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+                        @keyframes floatSlow { 0% { transform: translateY(0px); } 50% { transform: translateY(-5px); } 100% { transform: translateY(0px); } }
+                        .astrological-identity-banner { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+                        .astrological-identity-banner:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06); }
+                        .ai-banner-decor-left svg { animation: spinSlow 20s linear infinite; transform-origin: center; }
+                        .ai-banner-decor-right svg { animation: floatSlow 6s ease-in-out infinite; }
+                        .ai-banner-item { transition: transform 0.3s ease; }
+                        .ai-banner-item:hover { transform: translateY(-2px); }
+                        .ai-banner-icon { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+                        .ai-banner-item:hover .ai-banner-icon { transform: scale(1.05); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); }
+                        @media (max-width: 992px) {
+                            .astrological-identity-banner { padding: 15px 20px !important; gap: 10px !important; }
+                            .ai-banner-title h2 { font-size: 18px !important; }
+                            .ai-banner-title p { font-size: 12px !important; }
+                            .ai-banner-icon { width: 38px !important; height: 38px !important; }
+                            .ai-banner-text div:last-child { font-size: 16px !important; }
+                            .ai-banner-decor-left svg { width: 36px; height: 36px; }
+                            .ai-banner-divider.ai-hide-mobile { margin: 0 10px !important; }
+                        }
+                        @media (max-width: 600px) {
+                            .astrological-identity-banner { flex-direction: column !important; align-items: center !important; text-align: center !important; padding: 25px 20px !important; }
+                            .ai-banner-decor-left { margin: 0 0 15px 0 !important; }
+                            .ai-hide-mobile { display: none !important; }
+                            .ai-banner-title { margin-bottom: 20px !important; }
+                            .ai-banner-item { width: 100% !important; justify-content: center !important; margin-bottom: 15px !important; }
+                            .ai-banner-item:last-child { margin-bottom: 0 !important; }
+                            .ai-banner-text { text-align: left !important; }
+                        }
+                    ` }} />
                     {isManglik && <div className="homa-section" id="homaSection">
                         <div className="homa-header">
                             <div className="homa-divider">
@@ -632,7 +780,7 @@ const Result = ({ isVisible, isManglik, result }: ResultProps) => {
                                     </div>
                                     <h4 className="homa-card-title">Mangal Santhi Homa</h4>
                                     <p className="homa-card-subtitle">(Mars Pacification Homa)</p>
-                                    <a href="https://www.astroved.com/-P52.aspx" target="_blank" rel="noopener noreferrer" className="homa-btn">View Details &rarr;</a>
+                                    <a href="https://www.astroved.com/-P52.aspx?promo=AVP_Mangal_Santhi_Homa" target="_blank" rel="noopener noreferrer" className="homa-btn">View Details &rarr;</a>
                                 </div>
                             </div>
 
@@ -652,7 +800,7 @@ const Result = ({ isVisible, isManglik, result }: ResultProps) => {
                                     </div>
                                     <h4 className="homa-card-title">Hanuman Homa</h4>
                                     <p className="homa-card-subtitle">(Homa for Strength, Courage and Protection)</p>
-                                    <a href="https://www.astroved.com/-P68.aspx" target="_blank" rel="noopener noreferrer" className="homa-btn">View Details &rarr;</a>
+                                    <a href="https://www.astroved.com/-P68.aspx?promo=AVP_Hanuman_Homa" target="_blank" rel="noopener noreferrer" className="homa-btn">View Details &rarr;</a>
                                 </div>
                             </div>
 
@@ -679,7 +827,7 @@ const Result = ({ isVisible, isManglik, result }: ResultProps) => {
                                     </div>
                                     <h4 className="homa-card-title">Valli Murugan Homa</h4>
                                     <p className="homa-card-subtitle">(Homa for Murugan and his consorts Valli and Devayani)</p>
-                                    <a href="https://www.astroved.com/-P64969.aspx" target="_blank" rel="noopener noreferrer" className="homa-btn">View Details &rarr;</a>
+                                    <a href="https://www.astroved.com/-P64969.aspx?promo=AVP_Valli_Murugan_Homa" target="_blank" rel="noopener noreferrer" className="homa-btn">View Details &rarr;</a>
                                 </div>
                             </div>
                         </div>
@@ -735,7 +883,7 @@ const Result = ({ isVisible, isManglik, result }: ResultProps) => {
                                             <p style={{ color: '#475569', fontSize: '14px', lineHeight: '1.6', marginBottom: '25px', flexGrow: 1 }}>
                                                 Find out if Sarpa Dosha is present in your horoscope and get insights on its effects and remedies.
                                             </p>
-                                            <a href="https://www.astroved.com/astropedia/en/freetools/naga-dosha" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px', background: '#d56615', color: '#ffffff', padding: '12px 30px', borderRadius: '30px', textDecoration: 'none', fontWeight: '600', fontSize: '15px', transition: 'background 0.3s ease', margin: '0 auto' }}>
+                                            <a href="https://www.astroved.com/astropedia/en/freetools/naga-dosha?promo=AVP_Sarpa_Dosha_Calculator" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px', background: '#d56615', color: '#ffffff', padding: '12px 30px', borderRadius: '30px', textDecoration: 'none', fontWeight: '600', fontSize: '15px', transition: 'background 0.3s ease', margin: '0 auto' }}>
                                                 View Details
                                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" /></svg>
                                             </a>
@@ -768,7 +916,7 @@ const Result = ({ isVisible, isManglik, result }: ResultProps) => {
                                             <p style={{ color: '#475569', fontSize: '14px', lineHeight: '1.6', marginBottom: '25px', flexGrow: 1 }}>
                                                 Match two horoscopes to check compatibility and assess the strength of your relationship.
                                             </p>
-                                            <a href="https://www.astroved.com/astropedia/en/freetools/horoscope-matching" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px', background: '#c1215b', color: '#ffffff', padding: '12px 30px', borderRadius: '30px', textDecoration: 'none', fontWeight: '600', fontSize: '15px', transition: 'background 0.3s ease', margin: '0 auto' }}>
+                                            <a href="https://www.astroved.com/astropedia/en/freetools/horoscope-matching?promo=AVP_Horoscope_Matching" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px', background: '#c1215b', color: '#ffffff', padding: '12px 30px', borderRadius: '30px', textDecoration: 'none', fontWeight: '600', fontSize: '15px', transition: 'background 0.3s ease', margin: '0 auto' }}>
                                                 View Details
                                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" /></svg>
                                             </a>
@@ -802,7 +950,7 @@ const Result = ({ isVisible, isManglik, result }: ResultProps) => {
                                             <p style={{ color: '#475569', fontSize: '14px', lineHeight: '1.6', marginBottom: '25px', flexGrow: 1 }}>
                                                 Understand your marriage compatibility based on planetary positions and build a strong and harmonious life together.
                                             </p>
-                                            <a href="https://www.astroved.com/astropedia/en/freetools/marriage-compatibility" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px', background: '#2c8253', color: '#ffffff', padding: '12px 30px', borderRadius: '30px', textDecoration: 'none', fontWeight: '600', fontSize: '15px', transition: 'background 0.3s ease', margin: '0 auto' }}>
+                                            <a href="https://www.astroved.com/astropedia/en/freetools/marriage-compatibility?promo=AVP_Marriage_Compatibility" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px', background: '#2c8253', color: '#ffffff', padding: '12px 30px', borderRadius: '30px', textDecoration: 'none', fontWeight: '600', fontSize: '15px', transition: 'background 0.3s ease', margin: '0 auto' }}>
                                                 View Details
                                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" /></svg>
                                             </a>
@@ -828,7 +976,7 @@ const Result = ({ isVisible, isManglik, result }: ResultProps) => {
                         <h2 className="cta-banner-title">Feeling Unsure About Choosing the Right Remedy?</h2>
                         <p className="cta-banner-desc">Talk to an astrologer for clear guidance on the remedies that best match your birth chart and marriage concerns.</p>
 
-                        <a href="https://www.astroved.com/astrovedspeaks/" target="_blank" rel="noopener noreferrer" className="btn-consult-astrologer">
+                        <a href="https://www.astroved.com/astrovedspeaks/?promo=AVP_Manglik_AstroVed_Speaks" target="_blank" rel="noopener noreferrer" className="btn-consult-astrologer">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="consult-chat-icon">
                                 <path
                                     d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
@@ -858,7 +1006,7 @@ const Result = ({ isVisible, isManglik, result }: ResultProps) => {
                         <h2 className="cta-banner-title">Go Beyond Tools. Get Real Guidance.</h2>
                         <p className="cta-banner-desc">Talk to an astrologer for a clearer understanding of your marriage prospects, compatibility, and the astrological factors influencing them.</p>
 
-                        <a href="https://www.astroved.com/astrovedspeaks/" target="_blank" rel="noopener noreferrer" className="btn-consult-astrologer">
+                        <a href="https://www.astroved.com/astrovedspeaks/?promo=AVP_Manglik_AstroVed_Speaks" target="_blank" rel="noopener noreferrer" className="btn-consult-astrologer">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="consult-chat-icon">
                                 <path
                                     d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">

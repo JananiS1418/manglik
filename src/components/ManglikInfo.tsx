@@ -51,7 +51,7 @@ const ManglikInfo = () => {
                         What Is Mangal Dosha (Chevvai Dosham)?
                     </h2>
                     <div style={{ color: '#4a4a4a', fontSize: '15px', lineHeight: '1.7' }}>
-                        <p style={{ marginBottom: '15px' }}><a href="https://www.astroved.com/articles/mangal-dosha" target="_blank" rel="noopener noreferrer" className="premium-text-link">Mangal Dosha</a> is a condition in Vedic astrology formed when Mars is placed in certain houses of the birth chart that are linked with marriage, family life, and relationships.</p>
+                        <p style={{ marginBottom: '15px' }}><a href="https://www.astroved.com/articles/mangal-dosha?promo=AVP_Manglik_Dosha_Article" target="_blank" rel="noopener noreferrer" className="premium-text-link">Mangal Dosha</a> is a condition in Vedic astrology formed when Mars is placed in certain houses of the birth chart that are linked with marriage, family life, and relationships.</p>
                         <p style={{ marginBottom: '15px' }}>Mars, also called Mangal, Kuja, or Angaraka, represents energy, courage, passion, and action. When its influence falls strongly on relationship-related areas of the horoscope, astrologers study how it may affect compatibility and married life.</p>
                         <p style={{ marginBottom: '15px' }}>A person with this combination is commonly called Manglik.</p>
                         <p style={{ marginBottom: '15px' }}>Kuja Dosha, Mangal Dosha, Manglik Dosha, and Chevvai or Sevvai Dosham refer to the same Mars-related condition. The name changes by region, but the astrological concept remains the same.</p>
@@ -70,7 +70,7 @@ const ManglikInfo = () => {
                         <p style={{ marginBottom: '20px' }}>If Mars falls in one of these sensitive positions, you may be identified as Manglik. If it does not, you are generally considered non-Manglik.</p>
                         
                         <div style={{ marginBottom: '20px' }}>
-                            <a href="https://www.astroved.com/astrovedspeaks/" target="_blank" rel="noopener noreferrer" className="manglik-cta-btn">
+                            <a href="https://www.astroved.com/astrovedspeaks/?promo=AVP_Manglik_AstroVed_Speaks" target="_blank" rel="noopener noreferrer" className="manglik-cta-btn">
                                 Check your manglik with our astrologer
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" width="20" height="20">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
@@ -88,8 +88,8 @@ const ManglikInfo = () => {
                         Which Houses Cause Mangal Dosha?
                     </h2>
                     <div style={{ color: '#4a4a4a', fontSize: '15px', lineHeight: '1.7' }}>
-                        <p style={{ marginBottom: '15px' }}><a href="https://www.astroved.com/articles/characteristics-of-the-12-zodiac-signs" target="_blank" rel="noopener noreferrer" className="premium-text-link">Several houses</a> influence your marriage compatibility and your relationship with your partner.</p>
-                        <p style={{ marginBottom: '15px' }}>Mangal Dosha is traditionally considered when Mars occupies the 1st, 2nd, 4th, 7th, 8th, or 12th house of the <a href="https://www.astroved.com/kundali-report/" target="_blank" rel="noopener noreferrer" className="premium-text-link">birth chart</a>. These houses are closely connected with personality, family life, home, marriage, intimacy, and adjustment in relationships.</p>
+                        <p style={{ marginBottom: '15px' }}><a href="https://www.astroved.com/articles/characteristics-of-the-12-zodiac-signs?promo=AVP_Zodiac_Signs_Article" target="_blank" rel="noopener noreferrer" className="premium-text-link">Several houses</a> influence your marriage compatibility and your relationship with your partner.</p>
+                        <p style={{ marginBottom: '15px' }}>Mangal Dosha is traditionally considered when Mars occupies the 1st, 2nd, 4th, 7th, 8th, or 12th house of the <a href="https://www.astroved.com/kundali-report/?promo=AVP_Kundali_Report" target="_blank" rel="noopener noreferrer" className="premium-text-link">birth chart</a>. These houses are closely connected with personality, family life, home, marriage, intimacy, and adjustment in relationships.</p>
                         <p style={{ marginBottom: '15px' }}>The influence of Mars may be understood differently depending on the house:</p>
                         <ul style={{ listStyleType: 'disc', paddingLeft: '20px', marginBottom: '15px', color: '#2D1854' }}>
                             <li style={{ marginBottom: '10px' }}><span style={{ color: '#4a4a4a' }}><strong>1st House:</strong> May bring a strong, assertive temperament that can influence relationships.</span></li>
@@ -158,14 +158,14 @@ const ManglikInfo = () => {
                         What Are the Traditional Remedies for Mangal Dosha?
                     </h2>
                     <div style={{ color: '#4a4a4a', fontSize: '15px', lineHeight: '1.7' }}>
-                        <p style={{ marginBottom: '15px' }}><a href="https://www.astroved.com/dosha-pariharam/manglik-dosha-remedies/" target="_blank" rel="noopener noreferrer" className="premium-text-link">Traditional remedies for Mangal Dosha</a> are chosen based on how Mars is placed and supported in the birth chart. The aim is to balance Mars&apos;s influence rather than follow the same remedy for everyone.</p>
+                        <p style={{ marginBottom: '15px' }}><a href="https://www.astroved.com/dosha-pariharam/manglik-dosha-remedies/?promo=AVP_Manglik_Remedies_Article" target="_blank" rel="noopener noreferrer" className="premium-text-link">Traditional remedies for Mangal Dosha</a> are chosen based on how Mars is placed and supported in the birth chart. The aim is to balance Mars&apos;s influence rather than follow the same remedy for everyone.</p>
                         <p style={{ marginBottom: '15px' }}><strong>Commonly recommended practices include:</strong></p>
                         
                         <ul style={{ listStyleType: 'disc', paddingLeft: '20px', marginBottom: '20px', color: '#2D1854' }}>
-                            <li style={{ marginBottom: '8px' }}><span style={{ color: '#4a4a4a' }}><strong><a href="https://www.astroved.com/planetary-fire-lab-mars-fire-lab-mars-planetary-blessings-homa--P52.aspx" target="_blank" rel="noopener noreferrer" className="premium-text-link">Mangal Shanti Homa</a> / Kuja Dosha Nivarana Homa</strong></span></li>
+                            <li style={{ marginBottom: '8px' }}><span style={{ color: '#4a4a4a' }}><strong><a href="https://www.astroved.com/planetary-fire-lab-mars-fire-lab-mars-planetary-blessings-homa--P52.aspx?promo=AVP_Mangal_Shanti_Homa" target="_blank" rel="noopener noreferrer" className="premium-text-link">Mangal Shanti Homa</a> / Kuja Dosha Nivarana Homa</strong></span></li>
                             <li style={{ marginBottom: '8px' }}><span style={{ color: '#4a4a4a' }}>Chanting Mars-related mantras</span></li>
                             <li style={{ marginBottom: '8px' }}><span style={{ color: '#4a4a4a' }}><strong>Navagraha Homa</strong> for broader planetary support</span></li>
-                            <li style={{ marginBottom: '8px' }}><span style={{ color: '#4a4a4a' }}>Tuesday prayers with <a href="https://www.astroved.com/planets-mars-yantra-3-inch-p23.aspx" target="_blank" rel="noopener noreferrer" className="premium-text-link">mars yantra</a>, fasting, or charity</span></li>
+                            <li style={{ marginBottom: '8px' }}><span style={{ color: '#4a4a4a' }}>Tuesday prayers with <a href="https://www.astroved.com/planets-mars-yantra-3-inch-p23.aspx?promo=AVP_Mars_Yantra" target="_blank" rel="noopener noreferrer" className="premium-text-link">mars yantra</a>, fasting, or charity</span></li>
                             <li style={{ marginBottom: '8px' }}><span style={{ color: '#4a4a4a' }}>Worship of <strong>Lord Hanuman or Lord Muruga</strong></span></li>
                             <li style={{ marginBottom: '0' }}><span style={{ color: '#4a4a4a' }}>Other <em>Pariharam</em> recommended after chart analysis</span></li>
                         </ul>
@@ -180,13 +180,13 @@ const ManglikInfo = () => {
                             fontSize: '15px',
                             lineHeight: '1.6'
                         }}>
-                            At AstroVed, <strong><a href="https://www.astroved.com/temple/chevvai-bhagavan-temple/" target="_blank" rel="noopener noreferrer" className="premium-text-link">Vedic Homas and Poojas</a></strong> are performed by experienced priests <strong>following traditional procedures</strong>, with options for personalized participation using your name and birth star.
+                            At AstroVed, <strong><a href="https://www.astroved.com/temple/chevvai-bhagavan-temple/?promo=AVP_Chevvai_Temple" target="_blank" rel="noopener noreferrer" className="premium-text-link">Vedic Homas and Poojas</a></strong> are performed by experienced priests <strong>following traditional procedures</strong>, with options for personalized participation using your name and birth star.
                         </div>
 
                         <p style={{ marginBottom: '25px' }}>Since the right remedy depends on your individual horoscope, it is best to first understand <strong>whether Mangal Dosha is present, how strong it is, and whether any cancellation factors already apply.</strong></p>
                     
                         <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
-                            <a href="https://www.astroved.com/dosha-pariharam/manglik-dosha-remedies/" target="_blank" rel="noopener noreferrer" className="manglik-explore-btn" style={{
+                            <a href="https://www.astroved.com/dosha-pariharam/manglik-dosha-remedies/?promo=AVP_Manglik_Remedies_Article" target="_blank" rel="noopener noreferrer" className="manglik-explore-btn" style={{
                                 display: 'inline-flex',
                                 alignItems: 'center',
                                 gap: '8px',
