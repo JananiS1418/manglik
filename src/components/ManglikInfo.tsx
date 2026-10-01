@@ -71,7 +71,7 @@ const ManglikInfo = () => {
                         
                         <div style={{ marginBottom: '20px' }}>
                             <a href="https://www.astroved.com/astrovedspeaks/?promo=AVP_Manglik_AstroVed_Speaks" target="_blank" rel="noopener noreferrer" className="manglik-cta-btn">
-                                Check your manglik with our astrologer
+                                Ask an Astrologer About Your Marriage Path
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" width="20" height="20">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
                                 </svg>
