@@ -32,15 +32,15 @@ const Footer = () => {
                 <div className="footer-col">
                     <h4 className="footer-heading">KNOW US</h4>
                     <ul className="footer-links">
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Board Of Advisors</a></li>
-                        <li><a href="#">R&D Institute</a></li>
-                        <li><a href="#">FAQs</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Partner Sites</a></li>
-                        <li><a href="#">Blogs</a></li>
-                        <li><a href="#">Articles</a></li>
-                        <li><a href="#">Podcast</a></li>
+                        <li><a href="#!" onClick={(e) => e.preventDefault()}>About</a></li>
+                        <li><a href="#!" onClick={(e) => e.preventDefault()}>Board Of Advisors</a></li>
+                        <li><a href="#!" onClick={(e) => e.preventDefault()}>R&D Institute</a></li>
+                        <li><a href="#!" onClick={(e) => e.preventDefault()}>FAQs</a></li>
+                        <li><a href="#!" onClick={(e) => e.preventDefault()}>Careers</a></li>
+                        <li><a href="#!" onClick={(e) => e.preventDefault()}>Partner Sites</a></li>
+                        <li><a href="#!" onClick={(e) => e.preventDefault()}>Blogs</a></li>
+                        <li><a href="#!" onClick={(e) => e.preventDefault()}>Articles</a></li>
+                        <li><a href="#!" onClick={(e) => e.preventDefault()}>Podcast</a></li>
                     </ul>
                 </div>
 
@@ -48,15 +48,15 @@ const Footer = () => {
                 <div className="footer-col">
                     <h4 className="footer-heading">ASTROWORLD</h4>
                     <ul className="footer-links">
-                        <li><a href="#">Astrology Services</a></li>
-                        <li><a href="#">Astropedia</a></li>
-                        <li><a href="#">Priest Services</a></li>
-                        <li><a href="#">Love & Marriage</a></li>
-                        <li><a href="#">Family</a></li>
-                        <li><a href="#">Business & Career</a></li>
-                        <li><a href="#">Wealth & Finance</a></li>
-                        <li><a href="#">Education</a></li>
-                        <li><a href="#">Health & Beauty</a></li>
+                        <li><a href="#!" onClick={(e) => e.preventDefault()}>Astrology Services</a></li>
+                        <li><a href="#!" onClick={(e) => e.preventDefault()}>Astropedia</a></li>
+                        <li><a href="#!" onClick={(e) => e.preventDefault()}>Priest Services</a></li>
+                        <li><a href="#!" onClick={(e) => e.preventDefault()}>Love & Marriage</a></li>
+                        <li><a href="#!" onClick={(e) => e.preventDefault()}>Family</a></li>
+                        <li><a href="#!" onClick={(e) => e.preventDefault()}>Business & Career</a></li>
+                        <li><a href="#!" onClick={(e) => e.preventDefault()}>Wealth & Finance</a></li>
+                        <li><a href="#!" onClick={(e) => e.preventDefault()}>Education</a></li>
+                        <li><a href="#!" onClick={(e) => e.preventDefault()}>Health & Beauty</a></li>
                     </ul>
                 </div>
 
@@ -64,12 +64,12 @@ const Footer = () => {
                 <div className="footer-col">
                     <h4 className="footer-heading">LEGAL</h4>
                     <ul className="footer-links">
-                        <li><a href="#">Disclaimer</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Return & Refund Policy</a></li>
-                        <li><a href="#">Security Policy</a></li>
-                        <li><a href="#">Shipment Policy</a></li>
-                        <li><a href="#">Terms and Conditions</a></li>
+                        <li><a href="#!" onClick={(e) => e.preventDefault()}>Disclaimer</a></li>
+                        <li><a href="#!" onClick={(e) => e.preventDefault()}>Privacy Policy</a></li>
+                        <li><a href="#!" onClick={(e) => e.preventDefault()}>Return & Refund Policy</a></li>
+                        <li><a href="#!" onClick={(e) => e.preventDefault()}>Security Policy</a></li>
+                        <li><a href="#!" onClick={(e) => e.preventDefault()}>Shipment Policy</a></li>
+                        <li><a href="#!" onClick={(e) => e.preventDefault()}>Terms and Conditions</a></li>
                     </ul>
                 </div>
 
@@ -78,10 +78,10 @@ const Footer = () => {
                     <h4 className="footer-heading">SUPPORT</h4>
                     <ul className="footer-links">
                         <li><a href="mailto:support@astroved.com">support@astroved.com</a></li>
-                        <li><a href="#">Offline Payment</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Feedback</a></li>
-                        <li><a href="#">Site Map</a></li>
+                        <li><a href="#!" onClick={(e) => e.preventDefault()}>Offline Payment</a></li>
+                        <li><a href="#!" onClick={(e) => e.preventDefault()}>Contact Us</a></li>
+                        <li><a href="#!" onClick={(e) => e.preventDefault()}>Feedback</a></li>
+                        <li><a href="#!" onClick={(e) => e.preventDefault()}>Site Map</a></li>
                     </ul>
                 </div>
 
@@ -114,11 +114,11 @@ const Footer = () => {
                 <div className="app-download-section">
                     <h5 className="app-download-heading">Download AstroVed App</h5>
                     <div className="app-buttons">
-                        <a href="#" className="app-link" aria-label="Download on Google Play">
+                        <a href="#!" onClick={(e) => e.preventDefault()} className="app-link" aria-label="Download on Google Play">
                             <img  src="https://cdn.astroved.com/images/images-av/play-store.png" alt="Google Play Store"
                                 style={{height: '40px', width: 'auto', borderRadius: '6px'}} />
                         </a>
-                        <a href="#" className="app-link" aria-label="Download on the App Store">
+                        <a href="#!" onClick={(e) => e.preventDefault()} className="app-link" aria-label="Download on the App Store">
                             <img  src="https://cdn.astroved.com/images/images-av/app-store.png" alt="Apple App Store"
                                 style={{height: '40px', width: 'auto', borderRadius: '6px'}} />
                         </a>
@@ -144,27 +144,27 @@ const Footer = () => {
                 </div>
                 <div className="social-wrapper">
                     <span>Follow us :</span>
-                    <a href="#" className="social-icon" aria-label="Facebook">
+                    <a href="#!" onClick={(e) => e.preventDefault()} className="social-icon" aria-label="Facebook">
                         <img  src="https://cdn.astroved.com/images/images-av/facebook.webp" alt="Facebook" width="28"
                             height="28" />
                     </a>
-                    <a href="#" className="social-icon" aria-label="WhatsApp">
+                    <a href="#!" onClick={(e) => e.preventDefault()} className="social-icon" aria-label="WhatsApp">
                         <img  src="https://cdn.astroved.com/images/images-av/whatsapp.webp" alt="WhatsApp" width="28"
                             height="28" />
                     </a>
-                    <a href="#" className="social-icon" aria-label="Twitter">
+                    <a href="#!" onClick={(e) => e.preventDefault()} className="social-icon" aria-label="Twitter">
                         <img  src="https://cdn.astroved.com/images/images-av/Twitter.webp" alt="Twitter" width="28"
                             height="28" />
                     </a>
-                    <a href="#" className="social-icon" aria-label="YouTube">
+                    <a href="#!" onClick={(e) => e.preventDefault()} className="social-icon" aria-label="YouTube">
                         <img  src="https://cdn.astroved.com/images/images-av/youtube.webp" alt="YouTube" width="28"
                             height="28" />
                     </a>
-                    <a href="#" className="social-icon" aria-label="Instagram">
+                    <a href="#!" onClick={(e) => e.preventDefault()} className="social-icon" aria-label="Instagram">
                         <img  src="https://cdn.astroved.com/images/images-av/instagram.webp" alt="Instagram" width="28"
                             height="28" />
                     </a>
-                    <a href="#" className="social-icon" aria-label="LinkedIn">
+                    <a href="#!" onClick={(e) => e.preventDefault()} className="social-icon" aria-label="LinkedIn">
                         <img  src="https://cdn.astroved.com/images/images-av/linkedin.webp" alt="LinkedIn" width="28"
                             height="28" />
                     </a>
